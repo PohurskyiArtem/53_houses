@@ -1,0 +1,19 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "settings";
+
+//component styles
+@import "./components/header";
+@import "./components/offer";
+@import "./components/promotions";
+@import "./components/projects";
+@import "./components/project-card";
+@import "./components/about";
+@import "./components/excursion";
+@import "./components/work-schema";
+@import "./components/services";
+@import "./components/portfolio";
+@import "./components/reviews";
+@import "./components/footer";

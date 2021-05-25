@@ -1,0 +1,261 @@
+.header {
+  width: 100%;
+  height: 425px;
+  background-image: url("../../img/header-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    min-width: 1170px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: start;
+    margin-bottom: 21px;
+    padding-top: 40px;
+  }
+
+  &__contacts {
+    margin-left: 90px;
+    padding-left: 42px;
+    background-image: url("../../img/phone.png");
+    background-position: 0 0;
+    background-size: 28px;
+    background-repeat: no-repeat;
+  }
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &-contacts {
+    &__tel {
+      min-width: 228px;
+      font-size: 28px;
+    }
+
+    &__descr {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+  }
+
+  &__feedback {
+    margin-left: 20px;
+  }
+
+  &__social {
+    margin-left: 40px;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+
+  &__tel {
+    font-weight: 700;
+  }
+
+  &__descr {
+    font-family: "Mont", sans-serif;
+    font-weight: 600;
+  }
+
+  &-messengers {
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    &__item {
+      height: 100%;
+    }
+
+    &__link {
+      display: block;
+      width: 30px;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &--whats {
+        background-image: url("../../img/WhatsApp.png");
+      }
+
+      &--viber {
+        background-image: url("../../img/Viber.png");
+      }
+
+      &--telegram {
+        background-image: url("../../img/Telegram.png");
+      }
+    }
+  }
+}
+
+.feedback {
+  width: 380px;
+
+  .feedback-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__link {
+      margin-bottom: 12px;
+      border-radius: 50px;
+      padding-top: 17px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      &--call {
+        width: 165px;
+        color: var(--color-white);
+        background-color: var(--color-white-brown);
+      }
+
+      &--question {
+        padding-left: 28px;
+        width: 205px;
+        color: #4b413b;
+        background-image: url("../../img/Question.png");
+        background-position: 28px 16px;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-color: var(--color-white);
+      }
+    }
+
+    &__descr {
+      font-family: "Mont", sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--color-white);
+    }
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--vk {
+      background-image: url("../../img/VK.png");
+    }
+
+    &--inst {
+      background-image: url("../../img/Instagram.png");
+    }
+
+    &--youtube {
+      background-image: url("../../img/YouTube.png");
+    }
+  }
+
+  &__descr {
+    padding-left: 20px;
+    max-width: 130px;
+    font-family: "Mont", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--color-white);
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__item {
+    position: relative;
+    height: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &--dropdown {
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+
+      .header-nav__link {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        margin-left: 15px;
+        width: 14px;
+        height: 14px;
+      }
+
+      &:hover {
+        .dropdown-link {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-link {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 2px);
+  z-index: 20;
+  display: none;
+  border-radius: 2px;
+  padding: 10px 0 10px 20px;
+  width: 100%;
+  background-color: var(--color-white-brown);
+
+  &__item {
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
