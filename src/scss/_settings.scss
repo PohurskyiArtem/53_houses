@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "RoadRadio", sans-serif;
+  font-weight: 500;
+  color: var(--color-bunker);
+  background-color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 375px;
+  min-width: 1170px;
+
+  @include xs {
+    padding: 0 15px;
+  }
+}
+
+.circle-link {
+  @include circle-link;
+}
+
+.yellow-btn {
+  @include yellow-btn;
+}
+
+.notification {
+  @include notification;
+}
+
+.phone-input {
+  @include phone-input;
+}
+
+.social {
+  @include social;
+}
+
+.light-blue-btn {
+  @include light-blue-btn;
+}
+
+.blue-btn {
+  @include blue-btn;
+}
+
+.callback-form-social-list {
+  @include callback-form-social-list;
+}
+
+.callback-form {
+  @include callback-form;
+}

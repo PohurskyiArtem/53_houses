@@ -1,0 +1,185 @@
+.project-card {
+  width: 375px;
+  user-select: none;
+
+  &__gallery {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    max-width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: calc(100% - 5px);
+  }
+
+  &__swiper-pag {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+  }
+
+  &__content {
+    padding: 25px 35px 32px;
+  }
+
+  &__title {
+    margin-top: 5px;
+    max-width: 300px;
+    font-size: 28px;
+  }
+
+  &__descr {
+    margin-top: -15px;
+    margin-bottom: 23px;
+    @include mont;
+    font-size: 16px;
+  }
+
+  &__tabs-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    button {
+      border: 1px solid var(--color-cerulean);
+      padding: 17px 0;
+      width: 100%;
+      font-family: "Mont-Bold", sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      text-align: center;
+      color: var(--color-cerulean);
+    }
+
+    &:hover {
+      button {
+        background-color: var(--color-lily-white);
+      }
+    }
+
+    &--left {
+      button {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+    }
+
+    &--right {
+      button {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+    }
+
+    &--active {
+      button {
+        color: var(--color-white);
+        background-color: var(--color-cerulean);
+      }
+
+      &:hover {
+        button {
+          background-color: var(--color-cerulean);
+        }
+      }
+    }
+  }
+
+  &__price-list {
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 0;
+    padding-right: 30px;
+    padding-left: 20px;
+    max-width: 100%;
+    font-family: "Mont", sans-serif;
+    font-size: 16px;
+    background-color: #eff3f5;
+
+    &__preview {
+      margin-right: 15px;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+    }
+
+    &__value {
+      margin-right: 0;
+      margin-left: auto;
+      font-family: "Mont-Bold", sans-serif;
+
+      &--unknown {
+        border-bottom: 1px dashed currentColor;
+        color: var(--color-red);
+
+        &:active,
+        &:focus {
+          border: none;
+          color: #dc1f4c;
+        }
+
+        &:hover {
+          border: none;
+          color: #ff4a76;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      background-color: var(--color-white);
+    }
+  }
+
+  &__calc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 22px 0;
+    width: 100%;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  &__more-link {
+    padding-left: 70px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #a3b1b7;
+
+    &:hover {
+      color: #919ea3;
+    }
+  }
+}
+.project-card__gallery.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  border-radius: 0;
+  width: 20%;
+  height: 5px;
+}
+
+.project-card__gallery.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: var(--color-cerulean);
+}
