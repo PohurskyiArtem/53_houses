@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>СК «53 Дома» - Проект</title>
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+</head>
+<body>
+    <div class="site-container">
+       @include('partials/header.html')
+       <main class="main-project">
+         <div class="container" style="position: relative;">
+          @include('partials/categories.html')
+
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">СК «53 Дома» — главная страница</a></li>
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Проекты </a></li>
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каркасные дома</a></li>
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Проект «ДК-024»</a></li>
+            </ul>
+          </div>
+
+          <h2 class="main-project__title">каркасный дом «дк-024»</h2>
+        </div>
+
+        @include('partials/product-page-card.html')
+        @include('partials/product-info.html')
+        @include('partials/work-schema.html')
+        @include('partials/more-projects.html')
+
+       </main>
+       @include('partials/footer.html')
+    </div>
+
+    <script src="scripts/vendor.min.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,122 @@
+.product-info {
+  margin-top: 30px;
+
+  &__nav {
+    box-shadow: inset 0 -1px 0 #e3eaed;
+  }
+
+  &__content {
+    @include mont;
+    font-size: 16px;
+    line-height: 160%;
+
+    span {
+      font-weight: 800;
+    }
+
+    tr {
+      &:nth-child(2n) {
+        background: #f7f9fa;
+      }
+
+      &:not(:last-child) {
+        box-shadow: inset 0 -1px 0 #e3eaed;
+      }
+
+      td {
+        padding-top: 22px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 22px;
+
+        &:first-child {
+          padding-right: 0;
+          padding-left: 60px;
+          width: 330px;
+        }
+      }
+    }
+  }
+
+  &__nav,
+  &__content {
+    min-width: 1170px;
+    background-color: var(--color-white);
+  }
+}
+
+.product-info-nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+    width: 240px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 110%;
+    text-align: center;
+    transition: opacity 0.3s;
+    user-select: none;
+
+    img {
+      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.75;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+
+    &--active {
+      border-bottom: 3px solid var(--color-cerulean);
+
+      .product-info-nav__price {
+        background-color: var(--color-cerulean);
+
+        &::after {
+          background-color: var(--color-cerulean);
+        }
+      }
+    }
+  }
+
+  &__price {
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    border-radius: 50px;
+    padding: 0 15px;
+    @include mont;
+    font-weight: 800;
+    font-size: 16px;
+    text-align: right;
+    color: var(--color-white);
+    background-color: var(--color-red);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      bottom: -7px;
+      clip-path: polygon(50% 0, 0 100%, 100% 100%);
+      width: 15px;
+      height: 8px;
+      background-color: var(--color-red);
+      transform: rotate(180deg);
+    }
+  }
+}

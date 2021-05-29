@@ -30,6 +30,11 @@
   }
 }
 
+.more-projects .projects__slider {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+
 .projects__slider.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction {
   display: flex;
   justify-content: center;
@@ -79,6 +84,19 @@
       color: var(--color-white);
       background-color: var(--color-cerulean);
     }
+  }
+}
+
+.more-projects .projects-slider-nav .projects-slider-nav__prev-btn,
+.more-projects .projects-slider-nav .projects-slider-nav__next-btn {
+  border: 1px solid currentColor;
+  color: #bfc9cd;
+  background-color: transparent;
+
+  &:hover {
+    border: none;
+    color: var(--color-white);
+    background-color: var(--color-cerulean);
   }
 }
 

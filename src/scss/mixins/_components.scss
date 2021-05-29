@@ -294,3 +294,41 @@
     }
   }
 }
+
+@mixin breadcrumbs {
+  position: relative;
+  top: -200px;
+  margin-top: 60px;
+  width: 100%;
+  @include mont;
+  font-size: 16px;
+  color: #818d92;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    transition: opacity 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      &::after {
+        content: "\203A";
+        position: absolute;
+        right: -20px;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      opacity: 0.75;
+      transition: opacity 0.3s;
+    }
+  }
+}

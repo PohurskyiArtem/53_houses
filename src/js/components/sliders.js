@@ -67,6 +67,20 @@ const reviewSlider = new Swiper(document.querySelector(".reviews__slider"), {
   }
 })
 
+const projectPageSlider = new Swiper(document.querySelector(".product-page-card__gallery"), {
+  loop: true,
+  navigation: {
+    nextEl: '.product-page-card__next-btn',
+    prevEl: '.product-page-card__prev-btn'
+  },
+  pagination: {
+    el: ".product-page-card__paginaton",
+    clickable: true,
+    type : 'custom',
+    bulletClass:'product-page-card__prev-image'
+  }
+})
+
 
 
 

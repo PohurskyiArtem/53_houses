@@ -58,11 +58,15 @@ ul {
 .container {
   margin: 0 auto;
   padding: 0 375px;
-  min-width: 1170px;
+  // min-width: 1170px;;
 
   @include xs {
     padding: 0 15px;
   }
+}
+
+.main-catalog {
+  background-color: #e5e5e5;
 }
 
 .circle-link {
@@ -99,4 +103,8 @@ ul {
 
 .callback-form {
   @include callback-form;
+}
+
+.breadcrumbs {
+  @include breadcrumbs;
 }

@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>СК «53 Дома»</title>
     <link rel="stylesheet" href="css/index.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
 </head>
 <body>
     <div class="site-container">
@@ -98,60 +105,61 @@
       </div>
     </div>
     <div class="offer-categories">
-      <ul class="offer-categories__list">
-        <li class="offer-categories__item">
-          <div class="categories-item__top">
-            <img src="./img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
-            <span class="categories-item__index">89</span>
-          </div>
-          <div class="categories-item__bottom">
-            <div class="offer-categories__text">
-              <h3 class="offer-categories__title">Каркасные дома</h3>
-              <span class="offer-categories__price">от 679 000 ₽</span>
-            </div>
-            <a href="#" class="offer-categories__link circle-link">
-              <svg>
-                 <use xlink:href="img/sprite.svg#arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="offer-categories__item">
-          <div class="categories-item__top">
-            <img src="./img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
-            <span class="categories-item__index">67</span>
-          </div>
-          <div class="categories-item__bottom">
-            <div class="offer-categories__text">
-              <h3 class="offer-categories__title">Дома <br> из бруса</h3>
-              <span class="offer-categories__price">от 549 000 ₽</span>
-            </div>
-            <a href="#" class="offer-categories__link circle-link">
-              <svg>
-                 <use xlink:href="img/sprite.svg#arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="offer-categories__item">
-          <div class="categories-item__top">
-            <img src="./img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
-            <span class="categories-item__index">24</span>
-          </div>
-          <div class="categories-item__bottom">
-            <div class="offer-categories__text">
-              <h3 class="offer-categories__title">Бани <br> из бруса</h3>
-              <span class="offer-categories__price">от 369 000 ₽</span>
-            </div>
-            <a href="#" class="offer-categories__link circle-link">
-              <svg>
-                 <use xlink:href="img/sprite.svg#arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <ul class="offer-categories__list">
+    <li class="offer-categories__item">
+      <div class="categories-item__top">
+        <img src="./img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
+        <span class="categories-item__index">89</span>
+      </div>
+      <div class="categories-item__bottom">
+        <div class="offer-categories__text">
+          <h3 class="offer-categories__title">Каркасные дома</h3>
+          <span class="offer-categories__price">от 679 000 ₽</span>
+        </div>
+        <a href="#" class="offer-categories__link circle-link">
+          <svg>
+             <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    <li class="offer-categories__item">
+      <div class="categories-item__top">
+        <img src="./img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
+        <span class="categories-item__index">67</span>
+      </div>
+      <div class="categories-item__bottom">
+        <div class="offer-categories__text">
+          <h3 class="offer-categories__title">Дома <br> из бруса</h3>
+          <span class="offer-categories__price">от 549 000 ₽</span>
+        </div>
+        <a href="#" class="offer-categories__link circle-link">
+          <svg>
+             <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    <li class="offer-categories__item">
+      <div class="categories-item__top">
+        <img src="./img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
+        <span class="categories-item__index">24</span>
+      </div>
+      <div class="categories-item__bottom">
+        <div class="offer-categories__text">
+          <h3 class="offer-categories__title">Бани <br> из бруса</h3>
+          <span class="offer-categories__price">от 369 000 ₽</span>
+        </div>
+        <a href="#" class="offer-categories__link circle-link">
+          <svg>
+             <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+
     <div class="offer-statistic statistic">
       <ul class="statistic__list">
         <li class="statistic__item">
@@ -248,11 +256,28 @@
                   <button class="btn-reset">Камерная сушка</button>
                 </li>
               </ul>
-              <ul class="project-card__price-list">
+              <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">150 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">200 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+              </ul>
+              <ul class="project-card__price-list project-card__price-list--right">
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">100 мм</span>
+                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
@@ -296,11 +321,28 @@
                   <button class="btn-reset">Камерная сушка</button>
                 </li>
               </ul>
-              <ul class="project-card__price-list">
+              <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">150 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">200 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+              </ul>
+              <ul class="project-card__price-list project-card__price-list--right">
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">100 мм</span>
+                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
@@ -344,11 +386,28 @@
                   <button class="btn-reset">Камерная сушка</button>
                 </li>
               </ul>
-              <ul class="project-card__price-list">
+              <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">150 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">200 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+              </ul>
+              <ul class="project-card__price-list project-card__price-list--right">
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">100 мм</span>
+                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
@@ -392,11 +451,28 @@
                   <button class="btn-reset">Камерная сушка</button>
                 </li>
               </ul>
-              <ul class="project-card__price-list">
+              <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">150 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">200 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+              </ul>
+              <ul class="project-card__price-list project-card__price-list--right">
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">100 мм</span>
+                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
@@ -440,11 +516,28 @@
                   <button class="btn-reset">Камерная сушка</button>
                 </li>
               </ul>
-              <ul class="project-card__price-list">
+              <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">150 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">200 мм</span>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                </li>
+              </ul>
+              <ul class="project-card__price-list project-card__price-list--right">
+                <li class="project-card__price">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
+                  <span class="project-card__price__size">100 мм</span>
+                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
                   <img class="project-card__price__preview" src="./img/project-preview-img.png">
@@ -1715,7 +1808,7 @@
     </div>
 </section>
 
-         
+
        </main>
        <footer class="footer">
   <div class="container footer__container">

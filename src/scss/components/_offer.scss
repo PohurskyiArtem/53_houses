@@ -75,8 +75,9 @@
   }
 
   &-categories {
+    position: relative;
+    top: -200px;
     min-width: 1170px;
-    transform: translateY(-200px);
 
     &__list {
       display: flex;
@@ -90,6 +91,7 @@
       padding: 40px 50px 45px;
       width: 33.3%;
       height: 335px;
+      background-color: var(--color-white);
       transition: color 0.3s;
 
       &:not(:last-child) {
@@ -245,6 +247,7 @@
     width: 33.3%;
     height: 335px;
     text-align: center;
+    background-color: var(--color-white);
 
     &:not(:last-child) {
       border-right: 1px solid rgba(227, 234, 237, 1);
@@ -379,4 +382,8 @@
     color: var(--color-white);
     background-color: var(--color-red);
   }
+}
+
+.offer .container {
+  position: relative;
 }

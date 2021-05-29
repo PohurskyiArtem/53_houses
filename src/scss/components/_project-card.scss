@@ -1,5 +1,6 @@
 .project-card {
   width: 375px;
+  background-color: var(--color-white);
   user-select: none;
 
   &__gallery {
@@ -97,6 +98,10 @@
 
   &__price-list {
     margin-bottom: 20px;
+
+    &--right {
+      display: none;
+    }
   }
 
   &__price {
