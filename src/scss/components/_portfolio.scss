@@ -31,6 +31,10 @@
     right: 19%;
     top: 260px;
     background-image: url("../../img/edit-not.png");
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__map {
@@ -148,17 +152,25 @@
   overflow: hidden;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 545px;
+
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+    }
   }
 
   &__item {
     position: relative;
-    width: 370px;
+    width: 340px;
     height: 260px;
+
+    @include mobile {
+      width: 450px;
+    }
   }
 
   &__img {

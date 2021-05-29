@@ -60,6 +60,7 @@
 }
 
 @mixin circle-link {
+  border: 1px solid var(--color-mystic);
   border-radius: 100%;
   padding: 18px;
   width: 50px;

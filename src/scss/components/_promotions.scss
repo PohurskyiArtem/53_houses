@@ -2,6 +2,10 @@
   margin-bottom: 40px;
   min-width: 1170px;
 
+  @include mobile {
+    min-width: auto;
+  }
+
   &__list {
     display: flex;
     width: 100%;
@@ -23,6 +27,11 @@
     &--gift {
       background-image: url("../../img/promotion1-bg.jpg");
 
+      @include mobile {
+        background-position: 100%;
+        background-size: cover;
+      }
+
       .promotions__link {
         color: #42a632;
       }
@@ -31,10 +40,19 @@
     &--delivery {
       background-image: url("../../img/promotion2-bg.jpg");
 
+      @include mobile {
+        background-position: left 100%;
+        background-size: cover;
+      }
+
       .promotions__content {
         margin-right: auto;
         margin-left: 0;
         padding-left: 70px;
+
+        @include mobile {
+          padding-left: 30px;
+        }
       }
 
       .promotions__link {
@@ -48,6 +66,10 @@
     margin-left: auto;
     padding: 30px 0;
     width: 47%;
+
+    @include mobile {
+      width: 65%;
+    }
   }
 
   &__title {

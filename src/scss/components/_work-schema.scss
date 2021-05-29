@@ -2,11 +2,11 @@
   position: relative;
   top: -48px;
   z-index: 10;
-  padding-top: 115px;
+  padding-top: 100px;
   padding-bottom: 185px;
   background-image: url("../../img/section-work-schema-bg.png");
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 
   &::after {
@@ -32,6 +32,11 @@
   .work-shema__stages-list {
     display: flex;
     flex-wrap: wrap;
+    min-width: 1170px;
+
+    @include mobile {
+      min-width: auto;
+    }
   }
 
   &__feedback-link {
@@ -46,6 +51,14 @@
       height: 45px;
       font-size: 12px;
     }
+
+    @include mobile {
+      padding: 0;
+
+      a {
+        margin: auto;
+      }
+    }
   }
 }
 
@@ -55,6 +68,11 @@
   width: 374px;
   height: 280px;
   background-color: var(--color-white);
+
+  @include mobile {
+    padding: 40px 25px 40px 25px;
+    width: 290px;
+  }
 
   &__top {
     padding-left: 105px;

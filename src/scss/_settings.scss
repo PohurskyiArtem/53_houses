@@ -57,8 +57,13 @@ ul {
 
 .container {
   margin: 0 auto;
-  padding: 0 375px;
-  // min-width: 1170px;;
+  padding: 0 40px;
+  width: 1250px;
+
+  @include md-extended {
+    width: auto;
+    max-width: 1250px;
+  }
 
   @include xs {
     padding: 0 15px;

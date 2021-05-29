@@ -12,6 +12,11 @@
     font-size: 72px;
     line-height: 100%;
     text-transform: uppercase;
+
+    @include mobile {
+      max-width: 800px;
+      text-align: center;
+    }
   }
 
   &__descr {
@@ -19,6 +24,11 @@
     @include mont;
     font-size: 20px;
     line-height: 160%;
+
+    @include mobile {
+      max-width: 750px;
+      text-align: center;
+    }
   }
 
   &__about-projects {
@@ -44,11 +54,16 @@
 
 .about-grid {
   display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 60px;
   margin-bottom: 56px;
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    margin: 60px auto 50px 0;
+    max-width: 770px;
+  }
 
   &__item {
     border-radius: 24px;
@@ -63,6 +78,10 @@
 
     &--empty {
       background-color: transparent;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 

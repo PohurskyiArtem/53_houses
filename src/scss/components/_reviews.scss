@@ -1,10 +1,13 @@
 .reviews {
   padding-top: 100px;
-  height: 1355px;
   background-image: url("../../img/reviews-section-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &__container {
+    padding: 0;
+  }
 
   &__title {
     margin: 0 auto 30px;
@@ -22,11 +25,15 @@
     font-size: 20px;
     line-height: 160%;
     text-align: center;
+
+    @include mobile {
+      margin-bottom: 100px;
+    }
   }
 
   &__slider-container {
     position: relative;
-    width: 100%;
+    min-width: 1170px;
   }
 
   &__slider {
@@ -38,19 +45,32 @@
     height: 555px;
     box-shadow: 0 35px 70px rgba(11, 15, 17, 0.05);
 
+    @include mobile {
+      margin: 0 0 60px;
+      width: 100%;
+    }
+
     &__prev-btn {
       left: 20px;
       transform: rotate(-180deg);
+
+      @include mobile {
+        left: 35%;
+      }
     }
 
     &__next-btn {
       right: 20px;
+
+      @include mobile {
+        right: 50%;
+      }
     }
 
     &__prev-btn,
     &__next-btn {
       position: absolute;
-      bottom: 40%;
+      bottom: 50%;
       z-index: 40;
       border: 10px solid #f7f9fa;
       border-radius: 100%;
@@ -68,6 +88,10 @@
 
       &:hover {
         background-color: var(--color-cerulean);
+      }
+
+      @include mobile {
+        top: -90px;
       }
     }
   }
@@ -111,6 +135,10 @@
     margin-right: 5.5%;
     width: 47%;
     height: 100%;
+
+    @include mobile {
+      width: 40%;
+    }
   }
 
   &__image {
@@ -152,20 +180,20 @@
     }
 
     &__next-btn {
-      right: -45px;
+      right: -35px;
     }
 
     &__prev-btn,
     &__next-btn {
       position: absolute;
-      bottom: 140px;
+      bottom: 145px;
       z-index: 20;
       border: 10px solid var(--color-white);
       border-radius: 100%;
       padding: 10px 12px;
       padding-top: 12px;
-      width: 35px;
-      height: 35px;
+      width: 20px;
+      height: 20px;
       color: var(--color-white);
       background-color: var(--color-mystic);
 
@@ -184,6 +212,11 @@
   &__content {
     width: 47.5%;
     height: 100%;
+
+    @include mobile {
+      padding-right: 20px;
+      width: 54.5%;
+    }
   }
 
   &__user-info {
@@ -196,6 +229,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      max-width: 85%;
+    }
   }
 
   &__prop {

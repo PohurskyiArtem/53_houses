@@ -1,11 +1,11 @@
 .services {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 245px;
   background-image: url("../../img/section-services-bg.png");
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  transform: translateY(-68px);
+  transform: translateY(-90px);
 
   &__title {
     margin: 0 auto 40px;

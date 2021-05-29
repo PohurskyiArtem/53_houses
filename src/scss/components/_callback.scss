@@ -1,5 +1,4 @@
 .callback {
-  position: relative;
   padding-top: 105px;
   padding-bottom: 110px;
   background-image: url("../../img/callback-section-bg.png");
@@ -8,11 +7,16 @@
   background-repeat: no-repeat;
 
   &__container {
+    position: relative;
     width: 100%;
     height: 100%;
     background-image: url("../../img/manager.png");
-    background-position: 45% bottom;
+    background-position: 40% 70%;
     background-repeat: no-repeat;
+
+    @include mobile {
+      background-size: 300px 150px;
+    }
   }
 
   &__title {
@@ -45,8 +49,8 @@
 
   &__form {
     position: absolute;
-    right: 375px;
-    top: 110px;
+    right: 0;
+    top: 0;
     border-radius: 24px;
     padding: 50px 45px;
     width: 470px;

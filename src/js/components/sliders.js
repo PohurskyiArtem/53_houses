@@ -3,14 +3,16 @@ import Swiper from '../vendor/swiper.min.js';
 const projectsSlider = new Swiper(document.querySelector(".projects__slider"), {
   loop: true,
   allowTouchMove: false,
-  spaceBetween: 28,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.projects-slider-nav__next-btn',
     prevEl: '.projects-slider-nav__prev-btn'
   },
+  slidesPerView: 2,
   breakpoints: {
-    768: {
+    1200: {
       slidesPerView: 3,
+      spaceBetween: 30
     }
   },
   pagination: {
@@ -47,7 +49,7 @@ const previewSlider = new Swiper(document.querySelectorAll(".review-card__previe
   },
   spaceBetween: 15,
   breakpoints: {
-    768: {
+    1024: {
       slidesPerView: 3,
     }
   },

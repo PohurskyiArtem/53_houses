@@ -6,6 +6,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include mobile {
+    background-image: none;
+    background-color: var(--color-white);
+  }
+
   &__container {
     position: relative;
     top: -200px;
@@ -15,6 +20,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mobile {
+      min-width: auto;
+      max-width: 100%;
+      background-position: 100%;
+      background-size: contain;
+    }
   }
 
   &__content {
@@ -22,6 +34,11 @@
     margin-left: auto;
     padding: 65px 0;
     width: 46%;
+
+    @include mobile {
+      margin-left: 50%;
+      width: 100%;
+    }
   }
 
   &__guarantee {
@@ -31,8 +48,12 @@
     padding: 60px 27px 34px;
     width: 140px;
     height: 140px;
-    background-image: url(../../img/guarantee.png);
+    background-image: url("../../img/guarantee.png");
     background-position: center 20%;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__title {
@@ -79,6 +100,10 @@
     top: -200px;
     min-width: 1170px;
 
+    @include mobile {
+      min-width: auto;
+    }
+
     &__list {
       display: flex;
       align-items: flex-start;
@@ -93,6 +118,11 @@
       height: 335px;
       background-color: var(--color-white);
       transition: color 0.3s;
+
+      @include mobile {
+        padding: 30px;
+        padding-right: 15px;
+      }
 
       &:not(:last-child) {
         border-right: 1px solid rgba(227, 234, 237, 1);
@@ -146,6 +176,10 @@
   &-statistic {
     min-width: 1170px;
     transform: translateY(-200px);
+
+    @include mobile {
+      min-width: auto;
+    }
 
     &__list {
       display: flex;
@@ -249,6 +283,11 @@
     text-align: center;
     background-color: var(--color-white);
 
+    @include mobile {
+      padding: 30px;
+      padding-top: 50px;
+    }
+
     &:not(:last-child) {
       border-right: 1px solid rgba(227, 234, 237, 1);
     }
@@ -258,6 +297,11 @@
       align-items: flex-start;
       padding: 45px 75px 70px 50px;
       text-align: left;
+
+      @include mobile {
+        padding: 30px;
+        padding-right: 15px;
+      }
 
       .statistic__title {
         margin-bottom: 5px;
@@ -310,12 +354,21 @@
     &--count {
       padding: 60px 75px 70px;
 
+      @include mobile {
+        padding: 30px;
+        padding-top: 50px;
+      }
+
       .statistic__img {
         max-width: 245px;
       }
 
       .statistic__descr {
         margin-bottom: 25px;
+
+        @include mobile {
+          margin-bottom: 35px;
+        }
       }
     }
   }
@@ -364,6 +417,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      align-items: flex-end;
+    }
   }
 
   &__index {

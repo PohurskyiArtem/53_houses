@@ -9,23 +9,44 @@
     display: flex;
     align-items: center;
     min-width: 1170px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      min-width: auto;
+    }
   }
 
   &__title {
     margin-right: 50px;
+    width: 100%;
     font-size: 72px;
     line-height: 100%;
     text-transform: uppercase;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__slider {
     position: relative;
     overflow: hidden;
     margin-bottom: 60px;
+    min-width: 1170px;
+
+    @include mobile {
+      min-width: auto;
+    }
 
     &__pag {
       margin-top: 57px;
       min-width: 1170px;
+
+      @include mobile {
+        min-width: auto;
+      }
     }
   }
 }
