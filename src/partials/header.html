@@ -1,8 +1,8 @@
 <header class="header">
     <div class="container">
       <div class="header__top">
-          <img src="../img/logo.png" alt="logo" class="header__logo">
-          <img src="../img/logo-min.png" alt="logo" class="header__logo--mob for-mobile">
+          <a href="/"><img src="../img/logo.png" alt="logo" class="header__logo"></a>
+          <a href="/"><img src="../img/logo-min.png" alt="logo" class="header__logo--mob for-mobile"></a>
           <div class="header__contacts">
             <div class="header__phone">
               <a href="tel:+8 800 250 53 23" class="header__tel">8 800 250 53 23</a>
@@ -16,11 +16,11 @@
             <div class="header__feedback feedback">
               <ul class="feedback__list">
                 <li class="feedback__list__item">
-                  <a href="#" class="feedback__list__link feedback__list__link--call">перезвонить?</a>
+                  <button class="feedback__list__link feedback__list__link--call open-callback-modal">перезвонить?</button>
                   <span class="feedback__list__descr">В течение 15 минут</span>
                 </li>
                 <li class="feedback__list__item">
-                  <button class="feedback__list__link feedback__list__link--question">задать вопрос</button>
+                  <button class="feedback__list__link feedback__list__link--question open-callback-modal">задать вопрос</button>
                   <a href="email:work@53-doma.ru" class="feedback__list__descr">work@53-doma.ru</a>
                 </li>
               </ul>
@@ -34,37 +34,68 @@
             </ul>
             <div class="social__descr">Подписывайтесь в соц. сетях :)</div>
           </div>
+          <div class="header__burger-btn">
+            <div class="burger-btn_container">
+              <div class="burger-btn_wrapper">
+                <div class="burger-btn"><span></span></div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="header__bottom">
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#projects" class="header-nav__link">Проекты <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#projects" class="header-nav__link header-link">
+                  Проекты
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+               </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#" class="header-nav__link">Калькулятор</a></li>
-              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link">Наши работы</a></li>
+              <li class="header-nav__item"><a href="#" class="header-nav__link header-link">Калькулятор</a></li>
+              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link" header-link>Наши работы</a></li>
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#about" class="header-nav__link">Клиентам <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#about" class="header-nav__link header-link">
+                  Клиентам
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link">Экскурсии</a></li>
-                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link">Схема работы</a></li>
-                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link">Услуги</a></li>
+                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link header-link">Экскурсии</a></li>
+                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link header-link">Схема работы</a></li>
+                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link header-link">Услуги</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#prom" class="header-nav__link">Акции</a></li>
-              <li class="header-nav__item"><a href="#callback" class="header-nav__link">Контакты</a></li>
+              <li class="header-nav__item"><a href="#prom" class="header-nav__link header-link">Акции</a></li>
+              <li class="header-nav__item"><a href="#callback" class="header-nav__link header-link">Контакты</a></li>
             </ul>
+            <div class="header__bottom__contacts">
+              <span class="header__bottom__contacts__gray-descr">Свяжитесь, если есть вопросы:</span>
+              <a href="" class="header__bottom__contacts__tel">8 800 250 53 23</a>
+              <span class="header__bottom__contacts__dark-descr">Ежедневно, 9:00 — 18:00</span>
+              <ul class="contacts-messengers header__phone__messengers">
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--whats"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--viber"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--telegram"></a></li>
+              </ul>
+              <span class="header__bottom__contacts__gray-descr">Или приезжайте в офис:</span>
+              <span class="header__bottom__contacts__dark-descr header__bottom__contacts__dark-descr--big">174510, Новгородская область, г. Пестово, ул. Луговая, 10</span>
+              <a href="#" class="blue-btn header__bottom__contacts__link">схема проезда</a>
+            </div>
           </nav>
       </div>
+      <div class="header__mobile-white-bg"></div>
     </div>
 </header>

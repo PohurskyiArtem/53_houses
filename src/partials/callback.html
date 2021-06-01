@@ -7,31 +7,43 @@
     </p>
     <img src="../img/Ruble.png" alt="ruble icon">
     <p class="callback__proposal">Получите бесплатные подарки при заказе своего дома</p>
-    <a href="#" class="blue-btn callback__details-link">подробнее</a>
+    <a class="blue-btn callback__details-link open-callback-modal">подробнее</a>
     <div class="callback__form">
       <h4 class="callback__form__title">мы перезвоним вам в течение 30 минут</h4>
       <p class="callback__form__descr">В рабочие часы, с 9:00 — 18:00</p>
-      <div class="callback__form__social">
-        <ul class="callback-form-social-list__list">
-          <li class="callback-form-social-list__item callback-form-social-list__item--whats">
-            <img class="callback-form-social-list__img" src="../img/whatsapp-ios.png" alt="WhatsApp icon">
-            <a href="#" class="callback-form-social-list__link">WhatsApp</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--viber">
-            <img class="callback-form-social-list__img" src="../img/viber-ios.png" alt="Viber icon">
-            <a href="#" class="callback-form-social-list__link">Viber</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--telega">
-            <img class="callback-form-social-list__img" src="../img/telega-ios.png" alt="Telegram icon">
-            <a href="#" class="callback-form-social-list__link">Telegram</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--call">
-            <img class="callback-form-social-list__img" src="../img/call-ios.png" alt="Call icon">
-            <a href="#" class="callback-form-social-list__link">Звонок</a>
-          </li>
-        </ul>
-      </div>
       <form class="callback-form">
+        <div class="callback__form__social">
+          <ul class="callback-form-social-list__list">
+            <li class="callback-form-social-list__item callback-form-social-list__item--whats">
+              <label for="WhatsApp">
+                <input type="checkbox" name="WhatsApp" id="WhatsApp" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="../img/whatsapp-ios.png" alt="WhatsApp icon">
+                <a class="callback-form-social-list__link">WhatsApp</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--viber">
+              <label for="Viber">
+                <input type="checkbox" name="Viber" id="Viber" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="../img/viber-ios.png" alt="Viber icon">
+                <a class="callback-form-social-list__link">Viber</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--telega">
+              <label for="Telegram">
+                <input type="checkbox" name="Telegram" id="Telegram" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="../img/telega-ios.png" alt="Telegram icon">
+                <a class="callback-form-social-list__link">Telegram</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--call">
+              <label for="Call">
+                <input type="checkbox" name="Call" id="Call" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="../img/call-ios.png" alt="Call icon">
+                <a class="callback-form-social-list__link">Звонок</a>
+              </label>
+            </li>
+          </ul>
+        </div>
         <span class="callback-form__label">Введите номер телефона:</span>
         <input class="callback-form__phone phone-input" inputmode="tel" type="tel" name="tel" placeholder="Номер телефона">
         <button class="btn-reset yellow-btn callback-form__btn" type="submit">
@@ -45,5 +57,6 @@
           </span>
         </label>
       </form>
+      <img src="../img/manager.png" class="callback__manager" alt="Dimitriy">
     </div>
 </section>

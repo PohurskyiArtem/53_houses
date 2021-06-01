@@ -7,9 +7,25 @@
   background-repeat: no-repeat;
   transform: translateY(-28px);
 
+  @include sm {
+    padding-bottom: 500px;
+  }
+
+  @include xs {
+    top: -180px;
+  }
+
   &__content {
     padding-top: 45px;
     max-width: 50%;
+
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: none;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -19,6 +35,14 @@
     line-height: 100%;
     text-transform: uppercase;
     color: var(--color-white);
+
+    @include xs {
+      width: 90%;
+      font-size: 34px;
+      text-align: left;
+      margin: auto;
+      margin-bottom: 10px;
+    }
   }
 
   &__descr {
@@ -28,6 +52,23 @@
     font-size: 20px;
     line-height: 160%;
     color: var(--color-white);
+
+    @include sm {
+      margin: auto;
+    }
+
+    @include xs {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+
+  &__contacts {
+    @include sm {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
   }
 
   &__social {
@@ -68,6 +109,52 @@
         }
       }
     }
+
+    @include sm {
+      position: relative;
+      width: 100%;
+
+      span {
+        width: auto;
+      }
+
+      .callback-form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+
+        &__phone {
+          margin-right: 0;
+          margin-bottom: 125px;
+          width: 80%;
+        }
+
+        &__btn {
+          width: 80%;
+        }
+
+        &__agree {
+          position: absolute;
+          left: 80px;
+          bottom: 110px;
+        }
+      }
+    }
+
+    @include xs {
+      .callback-form {
+        align-items: flex-start;
+
+        &__phone {
+          width: 95%;
+        }
+
+        &__agree {
+          left: 0;
+        }
+      }
+    }
   }
 
   &__notification {
@@ -75,6 +162,19 @@
     left: 50%;
     top: 37%;
     background-image: url("../../img/time-not.png");
+
+    @include sm {
+      top: auto;
+      bottom: 230px;
+      left: 200px;
+    }
+
+    @include xs {
+      top: auto;
+      bottom: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -126,6 +226,10 @@
       width: 24px;
       height: 24px;
       background-color: var(--color-white);
+    }
+
+    @include sm {
+
     }
   }
 

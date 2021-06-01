@@ -8,10 +8,14 @@ const projectsSlider = new Swiper(document.querySelector(".projects__slider"), {
     nextEl: '.projects-slider-nav__next-btn',
     prevEl: '.projects-slider-nav__prev-btn'
   },
-  slidesPerView: 2,
+  slidesPerView: 1,
   breakpoints: {
     1200: {
       slidesPerView: 3,
+      spaceBetween: 30
+    },
+    577: {
+      slidesPerView: 2,
       spaceBetween: 30
     }
   },
@@ -49,7 +53,7 @@ const previewSlider = new Swiper(document.querySelectorAll(".review-card__previe
   },
   spaceBetween: 15,
   breakpoints: {
-    1024: {
+    320: {
       slidesPerView: 3,
     }
   },

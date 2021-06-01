@@ -7,6 +7,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include xs {
+    top: -180px;
+  }
+
   &__title {
     margin: auto;
     margin-bottom: 34px;
@@ -15,6 +19,10 @@
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
+
+    @include xs {
+      font-size: 34px;
+    }
   }
 
   &__descr {
@@ -24,6 +32,10 @@
     font-size: 20px;
     line-height: 160%;
     text-align: center;
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &__notification {
@@ -58,6 +70,10 @@
 
     .statistic__item--count .statistic__img {
       max-width: 300px;
+
+      @include sm {
+        width: 300px;
+      }
     }
   }
 }
@@ -72,6 +88,10 @@
     border-radius: 14px;
     width: 100%;
     background-color: var(--color-white);
+
+    @include xs {
+      left: 0;
+    }
 
     &::before {
       content: "";
@@ -161,6 +181,10 @@
       grid-template-columns: 1fr 1fr;
       height: auto;
     }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -170,6 +194,10 @@
 
     @include mobile {
       width: 450px;
+    }
+
+    @include sm {
+      margin: auto;
     }
   }
 

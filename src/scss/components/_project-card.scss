@@ -3,6 +3,15 @@
   background-color: var(--color-white);
   user-select: none;
 
+  @include sm {
+    min-width: 320px;
+  }
+
+  @include xs {
+    margin: auto;
+    width: 310px;
+  }
+
   &__gallery {
     position: relative;
     overflow: hidden;
@@ -11,8 +20,13 @@
   }
 
   &__img {
+    display: block;
     width: 100%;
     height: calc(100% - 5px);
+
+    &:hover {
+      cursor: zoom-in;
+    }
   }
 
   &__swiper-pag {
@@ -27,12 +41,18 @@
     @include mobile {
       text-align: center;
     }
+
+    @include sm {
+      padding: 25px 15px 32px;
+    }
   }
 
   &__title {
     margin-top: 5px;
     max-width: 300px;
     font-size: 28px;
+    display: block;
+    margin-bottom: 25px;
 
     @include mobile {
       max-width: 100%;

@@ -1,4 +1,5 @@
 .services {
+  position: relative;
   padding-top: 100px;
   padding-bottom: 245px;
   background-image: url("../../img/section-services-bg.png");
@@ -6,6 +7,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateY(-90px);
+
+  @include xs {
+    top: -180px;
+  }
 
   &__title {
     margin: 0 auto 40px;
@@ -15,6 +20,10 @@
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
+
+    @include xs {
+      font-size: 43px;
+    }
   }
 
   &__descr {
@@ -25,6 +34,10 @@
     font-size: 20px;
     line-height: 160%;
     text-align: center;
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &__notification {
@@ -36,6 +49,16 @@
     display: flex;
     flex-direction: column;
     padding: 70px 100px;
+
+    @include sm {
+      padding: 70px 15px;
+    }
+
+    @include xs {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 70px 0;
+    }
   }
 
   &__item {
@@ -45,6 +68,11 @@
     width: 70px;
     height: 70px;
     background-color: var(--color-cerulean);
+
+    @include xs {
+      width: 35px;
+      height: 35px;
+    }
 
     svg {
       position: absolute;
@@ -69,19 +97,21 @@
     }
 
     &:nth-child(2n) {
-      align-self: flex-end;
+      @media (min-width: (769px)) {
+        align-self: flex-end;
 
-      .services-content {
-        left: -500px;
+        .services-content {
+          left: -500px;
 
-        &::before {
-          left: 441px;
-          transform: rotate(90deg);
-        }
+          &::before {
+            left: 441px;
+            transform: rotate(90deg);
+          }
 
-        &::after {
-          left: 463px;
-          top: 63px;
+          &::after {
+            left: 463px;
+            top: 63px;
+          }
         }
       }
     }
@@ -98,6 +128,15 @@
   width: 470px;
   height: 345px;
   background-color: var(--color-white);
+
+  @include xs {
+    padding: 40px 20px 43px 20px;
+    top: 50px;
+    left: -10px;
+    width: 220px;
+    height: auto;
+    text-align: center;
+  }
 
   &::before {
     content: "";
@@ -125,6 +164,10 @@
     margin-bottom: 25px;
     font-size: 28px;
     line-height: 110%;
+
+    @include xs {
+      font-size: 18px;
+    }
   }
 
   &__descr {
@@ -133,10 +176,18 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
+
+    @include xs {
+      font-size: 14px;
+    }
   }
 
   &__links {
     display: flex;
+
+    @include xs {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -147,6 +198,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-white);
+
+    @include xs {
+      margin-bottom: 10px;
+    }
 
     &--blue {
       margin-right: 5px;

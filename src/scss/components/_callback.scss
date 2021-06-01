@@ -6,16 +6,24 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include sm {
+    padding-bottom: 800px;
+    background-image: url("../../img/callback-section-bg-mobile.png");
+    background-position: bottom center;
+  }
+
   &__container {
     position: relative;
-    width: 100%;
-    height: 100%;
     background-image: url("../../img/manager.png");
     background-position: 40% 70%;
     background-repeat: no-repeat;
 
     @include mobile {
       background-size: 300px 150px;
+    }
+
+    @include xs {
+      padding: 0 5px;
     }
   }
 
@@ -25,6 +33,15 @@
     max-width: 370px;
     font-size: 48px;
     line-height: 110%;
+
+    @include sm {
+      max-width: 80%;
+    }
+
+    @include xs {
+      padding-left: 20px;
+      font-size: 34px;
+    }
   }
 
   &__descr {
@@ -33,6 +50,15 @@
     max-width: 370px;
     font-size: 20px;
     line-height: 160%;
+
+    @include sm {
+      max-width: 90%;
+    }
+
+    @include xs {
+      padding-left: 20px;
+      font-size: 16px;
+    }
   }
 
   &__proposal {
@@ -41,10 +67,32 @@
     max-width: 270px;
     font-size: 20px;
     line-height: 160%;
+
+    @include sm {
+      max-width: 60%;
+    }
+
+    @include xs {
+      padding-left: 20px;
+    }
+  }
+
+  img[alt="ruble icon"] {
+    padding-left: 20px;
   }
 
   &__details-link {
     padding: 20px 40px;
+
+    @include sm {
+      position: absolute;
+      left: 30%;
+      top: 290px;
+    }
+
+    @include xs {
+      display: none;
+    }
   }
 
   &__form {
@@ -68,6 +116,27 @@
       @include mont;
       font-size: 16px;
     }
+
+    @include sm {
+      position: relative;
+      margin: auto;
+    }
+  }
+
+  &__manager {
+    display: none;
+
+    @include sm {
+      position: absolute;
+      left: 50%;
+      bottom: -600px;
+      display: block;
+      transform: translateX(-50%);
+    }
+
+    @include xs {
+      bottom: -700px;
+    }
   }
 }
 
@@ -87,10 +156,12 @@
     width: 50px;
     height: 50px;
     transition: background-color opacity 15s;
+    cursor: pointer;
 
     img {
       width: 30px;
       height: 30px;
+      cursor: pointer;
     }
 
     &:not(:last-child) {
@@ -115,7 +186,7 @@
 
     &--telega {
       &:hover {
-        background: linear-gradient(45deg, rgb(34, 159, 217), rgb(53, 109, 199));;
+        background: linear-gradient(45deg, rgb(34, 159, 217), rgb(53, 109, 199));
         opacity: 0.8;
         transition: background-color opacity 15s;
       }
@@ -123,10 +194,14 @@
 
     &--call {
       &:hover {
-        background: linear-gradient(45deg, rgb(255, 224, 54), rgb(193, 204, 11));;
+        background: linear-gradient(45deg, rgb(255, 224, 54), rgb(193, 204, 11));
         opacity: 0.8;
         transition: background-color opacity 15s;
       }
+    }
+
+    &--active {
+      transform: scale(0.8);
     }
   }
 }

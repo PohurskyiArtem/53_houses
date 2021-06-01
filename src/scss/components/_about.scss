@@ -6,6 +6,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include xs {
+    position: relative;
+    top: -180px;
+  }
+
   &__title {
     margin-bottom: 35px;
     max-width: 600px;
@@ -16,6 +21,12 @@
     @include mobile {
       max-width: 800px;
       text-align: center;
+    }
+
+    @include xs {
+      max-width: 80%;
+      font-size: 34px;
+      text-align: left;
     }
   }
 
@@ -28,6 +39,12 @@
     @include mobile {
       max-width: 750px;
       text-align: center;
+    }
+
+    @include xs {
+      max-width: 80%;
+      font-size: 16px;
+      text-align: left;
     }
   }
 
@@ -43,6 +60,19 @@
     img {
       margin-right: 20px;
       transform: translateY(25%);
+    }
+
+    @include xs {
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        display: none;
+      }
+
+      span {
+        text-align: center;
+      }
     }
   }
 
@@ -65,6 +95,10 @@
     max-width: 770px;
   }
 
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     border-radius: 24px;
     padding: 50px;
@@ -83,12 +117,24 @@
         display: none;
       }
     }
+
+    @include sm {
+      width: 100%;
+    }
+
+    @include xs {
+      height: auto;
+    }
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 25px;
     font-size: 24px;
+
+    @include xs {
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -96,5 +142,14 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
+
+    @include sm {
+      margin: auto;
+      max-width: 300px;
+    }
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 }

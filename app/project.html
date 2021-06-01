@@ -19,8 +19,8 @@
        <header class="header">
     <div class="container">
       <div class="header__top">
-          <img src="../img/logo.png" alt="logo" class="header__logo">
-          <img src="../img/logo-min.png" alt="logo" class="header__logo--mob for-mobile">
+          <a href="/"><img src="./img/logo.png" alt="logo" class="header__logo"></a>
+          <a href="/"><img src="./img/logo-min.png" alt="logo" class="header__logo--mob for-mobile"></a>
           <div class="header__contacts">
             <div class="header__phone">
               <a href="tel:+8 800 250 53 23" class="header__tel">8 800 250 53 23</a>
@@ -34,11 +34,11 @@
             <div class="header__feedback feedback">
               <ul class="feedback__list">
                 <li class="feedback__list__item">
-                  <a href="#" class="feedback__list__link feedback__list__link--call">перезвонить?</a>
+                  <button class="feedback__list__link feedback__list__link--call open-callback-modal">перезвонить?</button>
                   <span class="feedback__list__descr">В течение 15 минут</span>
                 </li>
                 <li class="feedback__list__item">
-                  <button class="feedback__list__link feedback__list__link--question">задать вопрос</button>
+                  <button class="feedback__list__link feedback__list__link--question open-callback-modal">задать вопрос</button>
                   <a href="email:work@53-doma.ru" class="feedback__list__descr">work@53-doma.ru</a>
                 </li>
               </ul>
@@ -52,38 +52,69 @@
             </ul>
             <div class="social__descr">Подписывайтесь в соц. сетях :)</div>
           </div>
+          <div class="header__burger-btn">
+            <div class="burger-btn_container">
+              <div class="burger-btn_wrapper">
+                <div class="burger-btn"><span></span></div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="header__bottom">
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#projects" class="header-nav__link">Проекты <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#projects" class="header-nav__link header-link">
+                  Проекты
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+               </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#" class="header-nav__link">Калькулятор</a></li>
-              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link">Наши работы</a></li>
+              <li class="header-nav__item"><a href="#" class="header-nav__link header-link">Калькулятор</a></li>
+              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link" header-link>Наши работы</a></li>
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#about" class="header-nav__link">Клиентам <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#about" class="header-nav__link header-link">
+                  Клиентам
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link">Экскурсии</a></li>
-                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link">Схема работы</a></li>
-                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link">Услуги</a></li>
+                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link header-link">Экскурсии</a></li>
+                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link header-link">Схема работы</a></li>
+                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link header-link">Услуги</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#prom" class="header-nav__link">Акции</a></li>
-              <li class="header-nav__item"><a href="#callback" class="header-nav__link">Контакты</a></li>
+              <li class="header-nav__item"><a href="#prom" class="header-nav__link header-link">Акции</a></li>
+              <li class="header-nav__item"><a href="#callback" class="header-nav__link header-link">Контакты</a></li>
             </ul>
+            <div class="header__bottom__contacts">
+              <span class="header__bottom__contacts__gray-descr">Свяжитесь, если есть вопросы:</span>
+              <a href="" class="header__bottom__contacts__tel">8 800 250 53 23</a>
+              <span class="header__bottom__contacts__dark-descr">Ежедневно, 9:00 — 18:00</span>
+              <ul class="contacts-messengers header__phone__messengers">
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--whats"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--viber"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--telegram"></a></li>
+              </ul>
+              <span class="header__bottom__contacts__gray-descr">Или приезжайте в офис:</span>
+              <span class="header__bottom__contacts__dark-descr header__bottom__contacts__dark-descr--big">174510, Новгородская область, г. Пестово, ул. Луговая, 10</span>
+              <a href="#" class="blue-btn header__bottom__contacts__link">схема проезда</a>
+            </div>
           </nav>
       </div>
+      <div class="header__mobile-white-bg"></div>
     </div>
 </header>
 
@@ -93,7 +124,7 @@
   <ul class="offer-categories__list">
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
+        <img src="./img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
         <span class="categories-item__index">89</span>
       </div>
       <div class="categories-item__bottom">
@@ -101,7 +132,7 @@
           <h3 class="offer-categories__title">Каркасные дома</h3>
           <span class="offer-categories__price">от 679 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -110,7 +141,7 @@
     </li>
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
+        <img src="./img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
         <span class="categories-item__index">67</span>
       </div>
       <div class="categories-item__bottom">
@@ -118,7 +149,7 @@
           <h3 class="offer-categories__title">Дома <br> из бруса</h3>
           <span class="offer-categories__price">от 549 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -127,7 +158,7 @@
     </li>
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
+        <img src="./img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
         <span class="categories-item__index">24</span>
       </div>
       <div class="categories-item__bottom">
@@ -135,7 +166,7 @@
           <h3 class="offer-categories__title">Бани <br> из бруса</h3>
           <span class="offer-categories__price">от 369 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -165,22 +196,22 @@
           <div class="product-page-card__gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="../img/project-image-1.jpg" alt="project image">
+                <img src="./img/project-image-1.jpg" alt="project image">
               </div>
               <div class="swiper-slide">
-                <img src="../img/project-image-2.jpg" alt="project image">
+                <img src="./img/project-image-2.jpg" alt="project image">
               </div>
               <div class="swiper-slide">
-                <img src="../img/project-image-3.jpg" alt="project image">
+                <img src="./img/project-image-3.jpg" alt="project image">
               </div>
               <div class="swiper-slide">
-                <img src="../img/project-image-1.jpg" alt="project image">
+                <img src="./img/project-image-1.jpg" alt="project image">
               </div>
               <div class="swiper-slide">
-                <img src="../img/project-image-2.jpg" alt="project image">
+                <img src="./img/project-image-2.jpg" alt="project image">
               </div>
               <div class="swiper-slide">
-                <img src="../img/project-image-3.jpg" alt="project image">
+                <img src="./img/project-image-3.jpg" alt="project image">
               </div>
             </div>
             <div class="product-page-card__guarantee notification">
@@ -200,22 +231,22 @@
             </div>
             <div class="product-page-card__paginaton">
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-1.jpg" alt="">
+                <img src="./img/project-image-1.jpg" alt="">
               </div>
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-2.jpg" alt="">
+                <img src="./img/project-image-2.jpg" alt="">
               </div>
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-3.jpg" alt="">
+                <img src="./img/project-image-3.jpg" alt="">
               </div>
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-1.jpg" alt="">
+                <img src="./img/project-image-1.jpg" alt="">
               </div>
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-2.jpg" alt="">
+                <img src="./img/project-image-2.jpg" alt="">
               </div>
               <div class="product-page-card__prev-image">
-                <img src="../img/project-image-3.jpg" alt="">
+                <img src="./img/project-image-3.jpg" alt="">
               </div>
             </div>
           </div>
@@ -231,14 +262,14 @@
           <div class="product-page-card__statistic statistic">
             <ul class="statistic__list">
               <li class="statistic__item statistic__item--count">
-                <img class="statistic__img" src="../img/proj-count.png" alt="Количество проектов">
+                <img class="statistic__img" src="./img/proj-count.png" alt="Количество проектов">
                 <p class="statistic__descr">домов и бань построено нами за все время</p>
-                <a class="statistic__link blue-btn">Посмотреть</a>
+                <a href="/#portfolio" class="statistic__link blue-btn">Посмотреть</a>
               </li>
               <li class="statistic__item statistic__item--count">
-                <img class="statistic__img" src="../img/family-count.png" alt="Количество проектов">
+                <img class="statistic__img" src="./img/family-count.png" alt="Количество проектов">
                 <p class="statistic__descr">семей уже радуются жизни в новых домах</p>
-                <a class="statistic__link blue-btn">читать отзывы</a>
+                <a href="/#review" class="statistic__link blue-btn">читать отзывы</a>
               </li>
             </ul>
           </div>
@@ -280,8 +311,8 @@
           <ul class="product-page-card__sets__list">
             <li class="product-page-card__sets__item">
               <div class="product-page-card__sets__item_left">
-                <span>Под усадку</span>
-                <a href="#">что входит</a>
+                <span>под усадку</span>
+                <a class="open-plan" data-set="под усадку">что входит</a>
               </div>
               <div class="product-page-card__sets__item_right">
                 <span>от 829 000 ₽</span>
@@ -290,7 +321,7 @@
             <li class="product-page-card__sets__item">
               <div class="product-page-card__sets__item_left">
                 <span>под ключ</span>
-                <a href="#">что входит</a>
+                <a class="open-plan" data-set="под ключ">что входит</a>
               </div>
               <div class="product-page-card__sets__item_right">
                 <span>от 1 023 000 ₽</span>
@@ -298,8 +329,8 @@
             </li>
             <li class="product-page-card__sets__item">
               <div class="product-page-card__sets__item_left">
-                <span>ДАЧНый</span>
-                <a href="#">что входит</a>
+                <span>дачный</span>
+                <a class="open-plan" data-set="дачный">что входит</a>
               </div>
               <div class="product-page-card__sets__item_right">
                 <span>от 1 345 000 ₽</span>
@@ -307,8 +338,8 @@
             </li>
             <li class="product-page-card__sets__item">
               <div class="product-page-card__sets__item_left">
-                <span>ЗИМНий</span>
-                <a href="#">что входит</a>
+                <span>зимний</span>
+                <a class="open-plan" data-set="зимний">что входит</a>
               </div>
               <div class="product-page-card__sets__item_right">
                 <span>от 1 583 000 ₽</span>
@@ -317,7 +348,7 @@
           </ul>
         </div>
         <div class="product-page-card__contacts">
-          <a class="product-page-card__contacts__link blue-btn" href="#">рассчитать проект</a>
+          <a class="product-page-card__contacts__link blue-btn open-calculate-modal" href="#">рассчитать проект</a>
           <span class="about-projects">Перезвоним вам в течение 30 минут и дадим предварительный расчет</span>
           <span class="about-projects">Или свяжитесь с нами:</span>
           <a href="tel:+8 800 250 53 23" class="product-page-card__contacts__tel contacts__tel">8 800 250 53 23</a>
@@ -336,23 +367,23 @@
   <div class="container product-info__container">
     <nav class="product-info__nav product-info-nav">
       <ul class="product-info-nav__list">
-        <li class="product-info-nav__item">
-          <img src="../img/product-nav-img-1.png" alt="product nav img">
+        <li class="product-info-nav__item" data-set="под усадку">
+          <img src="./img/product-nav-img-1.png" alt="product nav img">
           <span class="product-info-nav__link">под усадку</span>
           <span class="product-info-nav__price">от 829 000 ₽</span>
         </li>
-        <li class="product-info-nav__item product-info-nav__item--active">
-          <img src="../img/product-nav-img-2.png" alt="product nav img">
+        <li class="product-info-nav__item product-info-nav__item--active" data-set="дачный">
+          <img src="./img/product-nav-img-2.png" alt="product nav img">
           <span class="product-info-nav__link">дачный</span>
           <span class="product-info-nav__price">от 1 023 000 ₽</span>
         </li>
-        <li class="product-info-nav__item">
-          <img src="../img/product-nav-img-3.png" alt="product nav img">
+        <li class="product-info-nav__item" data-set="под ключ">
+          <img src="./img/product-nav-img-3.png" alt="product nav img">
           <span class="product-info-nav__link">под ключ</span>
           <span class="product-info-nav__price">от 1 345 000 ₽</span>
         </li>
-        <li class="product-info-nav__item">
-          <img src="../img/product-nav-img-4.png" alt="product nav img">
+        <li class="product-info-nav__item" data-set="зимний">
+          <img src="./img/product-nav-img-4.png" alt="product nav img">
           <span class="product-info-nav__link">зимний</span>
           <span class="product-info-nav__price">от 1 583 000 ₽</span>
         </li>
@@ -476,7 +507,7 @@
         <p class="stages-item__descr">На данном этапе происходит оплата 70% стоимости объекта;</p>
       </li>
       <li class="work-schema__feedback-link">
-        <a class="blue-btn" href="#">перезвоните мне</a>
+        <a class="blue-btn open-callback-modal">перезвоните мне</a>
       </li>
       <li class="work-schema__stages-item stages-item stages-item--left stages-item--step-4">
         <div class="stages-item__top">
@@ -526,11 +557,11 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
@@ -547,43 +578,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -591,11 +622,11 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
@@ -612,43 +643,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -656,11 +687,11 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
@@ -677,43 +708,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -721,11 +752,11 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
@@ -742,43 +773,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -786,11 +817,11 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
@@ -807,43 +838,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a href="#" class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -857,6 +888,14 @@
        </main>
        <footer class="footer">
   <div class="container footer__container">
+    <button class="btn-reset footer__burger-btn">
+      <div class="burger-btn_container">
+        <div class="burger-btn_wrapper">
+          <div class="burger-btn"><span></span></div>
+        </div>
+      </div>
+      <span class="burger-text">открыть меню</span>
+    </button>
     <div class="footer__left">
       <div class="footer__links">
         <nav class="footer__column">
@@ -919,9 +958,13 @@
         </div>
       </div>
       <div class="footer-contacts__callback-link">
-        <a href="#" class="yellow-btn">Перезвоните мне</a>
+        <a class="yellow-btn open-callback-modal">Перезвоните мне</a>
         <br><br><br><br>
         <span class="about-projects">Это — бесплатно. Перезвоним за 30 минут в рабочие часы</span>
+      </div>
+      <div class="footer__mobile-address">
+        <p class="footer__mobile-address__descr">174510, Новгородская область, г. Пестово, ул. Луговая, 10</p>
+        <a href="#" class="footer__mobile-address__link">work@53-doma.ru</a>
       </div>
     </div>
   </div>

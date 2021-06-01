@@ -15,12 +15,13 @@
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
 </head>
 <body>
+  
     <div class="site-container">
        <header class="header">
     <div class="container">
       <div class="header__top">
-          <img src="../img/logo.png" alt="logo" class="header__logo">
-          <img src="../img/logo-min.png" alt="logo" class="header__logo--mob for-mobile">
+          <a href="/"><img src="./img/logo.png" alt="logo" class="header__logo"></a>
+          <a href="/"><img src="./img/logo-min.png" alt="logo" class="header__logo--mob for-mobile"></a>
           <div class="header__contacts">
             <div class="header__phone">
               <a href="tel:+8 800 250 53 23" class="header__tel">8 800 250 53 23</a>
@@ -34,11 +35,11 @@
             <div class="header__feedback feedback">
               <ul class="feedback__list">
                 <li class="feedback__list__item">
-                  <a href="#" class="feedback__list__link feedback__list__link--call">перезвонить?</a>
+                  <button class="feedback__list__link feedback__list__link--call open-callback-modal">перезвонить?</button>
                   <span class="feedback__list__descr">В течение 15 минут</span>
                 </li>
                 <li class="feedback__list__item">
-                  <button class="feedback__list__link feedback__list__link--question">задать вопрос</button>
+                  <button class="feedback__list__link feedback__list__link--question open-callback-modal">задать вопрос</button>
                   <a href="email:work@53-doma.ru" class="feedback__list__descr">work@53-doma.ru</a>
                 </li>
               </ul>
@@ -52,38 +53,69 @@
             </ul>
             <div class="social__descr">Подписывайтесь в соц. сетях :)</div>
           </div>
+          <div class="header__burger-btn">
+            <div class="burger-btn_container">
+              <div class="burger-btn_wrapper">
+                <div class="burger-btn"><span></span></div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="header__bottom">
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#projects" class="header-nav__link">Проекты <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#projects" class="header-nav__link header-link">
+                  Проекты
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+               </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
-                    <li class="dropdown-link__item"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
+                    <li class="dropdown-link__item header-link"><a href="#" class="dropdown-link__link">Ссылка в меню</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#" class="header-nav__link">Калькулятор</a></li>
-              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link">Наши работы</a></li>
+              <li class="header-nav__item"><a href="#" class="header-nav__link header-link">Калькулятор</a></li>
+              <li class="header-nav__item"><a href="#portfolio" class="header-nav__link" header-link>Наши работы</a></li>
               <li class="header-nav__item header-nav__item--dropdown">
-                <a href="#about" class="header-nav__link">Клиентам <img src="../img/arrow-down.png" alt="drop submenu"></a>
+                <a href="#about" class="header-nav__link header-link">
+                  Клиентам
+                </a>
+                <svg>
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
                 <div class="header-nav__dropdown dropdown-link">
                   <ul class="dropdown-link__list">
-                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link">Экскурсии</a></li>
-                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link">Схема работы</a></li>
-                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link">Услуги</a></li>
+                    <li class="dropdown-link__item"><a href="#excursion" class="dropdown-link__link header-link">Экскурсии</a></li>
+                    <li class="dropdown-link__item"><a href="#schema" class="dropdown-link__link header-link">Схема работы</a></li>
+                    <li class="dropdown-link__item"><a href="#services" class="dropdown-link__link header-link">Услуги</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-nav__item"><a href="#prom" class="header-nav__link">Акции</a></li>
-              <li class="header-nav__item"><a href="#callback" class="header-nav__link">Контакты</a></li>
+              <li class="header-nav__item"><a href="#prom" class="header-nav__link header-link">Акции</a></li>
+              <li class="header-nav__item"><a href="#callback" class="header-nav__link header-link">Контакты</a></li>
             </ul>
+            <div class="header__bottom__contacts">
+              <span class="header__bottom__contacts__gray-descr">Свяжитесь, если есть вопросы:</span>
+              <a href="" class="header__bottom__contacts__tel">8 800 250 53 23</a>
+              <span class="header__bottom__contacts__dark-descr">Ежедневно, 9:00 — 18:00</span>
+              <ul class="contacts-messengers header__phone__messengers">
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--whats"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--viber"></a></li>
+                <li class="contacts-messengers__item"><a href="#" class="contacts-messengers__link contacts-messengers__link--telegram"></a></li>
+              </ul>
+              <span class="header__bottom__contacts__gray-descr">Или приезжайте в офис:</span>
+              <span class="header__bottom__contacts__dark-descr header__bottom__contacts__dark-descr--big">174510, Новгородская область, г. Пестово, ул. Луговая, 10</span>
+              <a href="#" class="blue-btn header__bottom__contacts__link">схема проезда</a>
+            </div>
           </nav>
       </div>
+      <div class="header__mobile-white-bg"></div>
     </div>
 </header>
 
@@ -98,9 +130,9 @@
         <h1 class="offer__title">Строим для вас каркасные дома по финской технологии</h1>
         <p class="offer__descr">Получите теплый и уютный дом для проживания «под ключ» за 21 день по цене от 9 900 ₽ за м2!</p>
         <div class="offer__pick-proj">
-          <button class="btn-reset offer__btn yellow-btn">
-            <img src="../img/finger.png" alt="finger icon">
-            подобрать проект</button>
+          <a href="/catalog.html" class="offer__btn yellow-btn">
+            <img src="./img/finger.png" alt="finger icon">
+            подобрать проект</a>
           <span class="offer__about-projects about-projects">Свыше 200 проектов на выбор</span>
         </div>
       </div>
@@ -109,7 +141,7 @@
   <ul class="offer-categories__list">
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
+        <img src="./img/karkasnie-doma.png" class="categories-item__img" alt="Каркасные дома">
         <span class="categories-item__index">89</span>
       </div>
       <div class="categories-item__bottom">
@@ -117,7 +149,7 @@
           <h3 class="offer-categories__title">Каркасные дома</h3>
           <span class="offer-categories__price">от 679 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -126,7 +158,7 @@
     </li>
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
+        <img src="./img/doma-iz-brusa.png" class="categories-item__img" alt="Дома из бруса">
         <span class="categories-item__index">67</span>
       </div>
       <div class="categories-item__bottom">
@@ -134,7 +166,7 @@
           <h3 class="offer-categories__title">Дома <br> из бруса</h3>
           <span class="offer-categories__price">от 549 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -143,7 +175,7 @@
     </li>
     <li class="offer-categories__item">
       <div class="categories-item__top">
-        <img src="../img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
+        <img src="./img/bany-iz-brusa.png" class="categories-item__img" alt="Бани из бруса">
         <span class="categories-item__index">24</span>
       </div>
       <div class="categories-item__bottom">
@@ -151,7 +183,7 @@
           <h3 class="offer-categories__title">Бани <br> из бруса</h3>
           <span class="offer-categories__price">от 369 000 ₽</span>
         </div>
-        <a href="#" class="offer-categories__link circle-link">
+        <a href="/catalog.html" class="offer-categories__link circle-link">
           <svg>
              <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
@@ -164,20 +196,22 @@
     <div class="offer-statistic statistic">
       <ul class="statistic__list">
         <li class="statistic__item">
-          <img class="statistic__img" src="../img/exp.png" alt="Стаж компании">
+          <img class="statistic__img" src="./img/exp.png" alt="Стаж компании">
           <p class="statistic__descr">лет строим лучшие дома и бани по всей России</p>
-          <a class="statistic__link light-blue-btn">немного о нас</a>
+          <a href="#about" class="statistic__link light-blue-btn">немного о нас</a>
         </li>
         <li class="statistic__item statistic__item--count">
-          <img class="statistic__img" src="../img/proj-count.png" alt="Количество проектов">
+          <img class="statistic__img" src="./img/proj-count.png" alt="Количество проектов">
           <p class="statistic__descr">домов и бань построено нами за все время</p>
-          <a class="statistic__link light-blue-btn">Посмотреть</a>
+          <a href="/catalog.html" class="statistic__link light-blue-btn">Посмотреть</a>
         </li>
         <li class="statistic__item statistic__item--calc">
-          <img class="statistic__img" src="../img/calculator.png" alt="calculator icon">
-          <h3 class="statistic__title">посчитать <br> проект</h3>
-          <p class="statistic__descr">Бесплатно</p>
-          <a href="#" class="statistic__link circle-link">
+          <img class="statistic__img statistic__img--calc" src="./img/calculator.png" alt="calculator icon">
+          <div class="statistic__text">
+            <h3 class="statistic__title">посчитать <br> проект</h3>
+            <p class="statistic__descr">Бесплатно</p>
+          </div>
+          <a class="statistic__link circle-link open-calculate-modal">
             <svg>
               <use xlink:href="img/sprite.svg#arrow-right"></use>
             </svg>
@@ -238,16 +272,16 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
             <div class="project-card__content">
-              <h3 class="project-card__title">проект ДК-024 «нОВГОРОД»</h3>
+              <a href="/project.html" class="project-card__title">проект ДК-024 «нОВГОРОД»</a>
               <p class="project-card__descr">Под ключ · 8×8 м · 119 м2</p>
               <ul class="project-card__tabs-list">
                 <li class="project-card__tab project-card__tab--left project-card__tab--active">
@@ -259,43 +293,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -303,16 +337,16 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
             <div class="project-card__content">
-              <h3 class="project-card__title">проект ДК-024 «нОВГОРОД»</h3>
+              <a href="/project.html" class="project-card__title">проект ДК-024 «нОВГОРОД»</a>
               <p class="project-card__descr">Под ключ · 8×8 м · 119 м2</p>
               <ul class="project-card__tabs-list">
                 <li class="project-card__tab project-card__tab--left project-card__tab--active">
@@ -324,43 +358,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -368,16 +402,16 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
             <div class="project-card__content">
-              <h3 class="project-card__title">проект ДК-024 «нОВГОРОД»</h3>
+              <a href="/project.html" class="project-card__title">проект ДК-024 «нОВГОРОД»</a>
               <p class="project-card__descr">Под ключ · 8×8 м · 119 м2</p>
               <ul class="project-card__tabs-list">
                 <li class="project-card__tab project-card__tab--left project-card__tab--active">
@@ -389,43 +423,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -433,16 +467,16 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
             <div class="project-card__content">
-              <h3 class="project-card__title">проект ДК-024 «нОВГОРОД»</h3>
+              <a href="/project.html" class="project-card__title">проект ДК-024 «нОВГОРОД»</a>
               <p class="project-card__descr">Под ключ · 8×8 м · 119 м2</p>
               <ul class="project-card__tabs-list">
                 <li class="project-card__tab project-card__tab--left project-card__tab--active">
@@ -454,43 +488,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -498,16 +532,16 @@
           <div class="project-card">
             <div class="project-card__gallery">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
-                <div class="swiper-slide"><img class="project-card__img" src="../img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
+                <div class="swiper-slide"><img class="project-card__img" src="./img/project-img.jpg" alt="Название проекта"></div>
               </div>
               <div class="project-card__swiper-pag"></div>
             </div>
             <div class="project-card__content">
-              <h3 class="project-card__title">проект ДК-024 «нОВГОРОД»</h3>
+              <a href="/project.html" class="project-card__title">проект ДК-024 «нОВГОРОД»</a>
               <p class="project-card__descr">Под ключ · 8×8 м · 119 м2</p>
               <ul class="project-card__tabs-list">
                 <li class="project-card__tab project-card__tab--left project-card__tab--active">
@@ -519,43 +553,43 @@
               </ul>
               <ul class="project-card__price-list project-card__price-list--left">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
                   <span class="project-card__price__value">от 1 289 000 ₽</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
               <ul class="project-card__price-list project-card__price-list--right">
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">100 мм</span>
-                  <span class="project-card__price__value project-card__price__value--unknown">Уточнить цену</span>
+                  <span class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</span>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">150 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
                 <li class="project-card__price">
-                  <img class="project-card__price__preview" src="../img/project-preview-img.png">
+                  <img class="project-card__price__preview" src="./img/project-preview-img.png">
                   <span class="project-card__price__size">200 мм</span>
-                  <a href="#" class="project-card__price__value project-card__price__value--unknown">Уточнить цену</a>
+                  <a class="project-card__price__value project-card__price__value--unknown open-callback-modal">Уточнить цену</a>
                 </li>
               </ul>
-              <button class="project-card__calc-btn btn-reset blue-btn">
-                <img src="../img/finger-white.png" alt="finger icon">
+              <button class="project-card__calc-btn btn-reset blue-btn open-calculate-modal">
+                <img src="./img/finger-white.png" alt="finger icon">
                 <span>рассчитать проект</span>
               </button>
-              <a href="#" class="project-card__more-link">узнать подробнее</a>
+              <a href="/project.html" class="project-card__more-link">узнать подробнее</a>
             </div>
           </div>
         </div>
@@ -564,16 +598,16 @@
     </div>
     <div class="projects__footer projects-footer">
       <div class="projects-footer__top">
-        <a href="#" class="projects-footer__top__link projects-footer__top__link--gray">еще 140 проектов</a>
-        <a href="#" class="yellow-btn projects-footer__top__link projects-footer__top__link--yellow">хочу индивидуальный проект</a>
+        <a href="/catalog.html" class="projects-footer__top__link projects-footer__top__link--gray">еще 140 проектов</a>
+        <a class="yellow-btn projects-footer__top__link projects-footer__top__link--yellow open-callback-modal">хочу индивидуальный проект</a>
       </div>
       <div class="projects-footer__bottom">
         <div class="projects-footer__calc-proj calc-proj">
-          <img src="../img/project.png" alt="Project image" class="calc-proj__img">
+          <img src="./img/project.png" alt="Project image" class="calc-proj__img">
           <div class="calc-proj__content">
             <h3 class="calc-proj__title">у меня уже есть проект</h3>
             <p class="calc-proj__descr">Сделаем дешевле — отправьте его нам на расчет</p>
-            <a href="#" class="calc-proj__link blue-btn">рассчитать</a>
+            <a class="calc-proj__link blue-btn open-calculate-modal">рассчитать</a>
           </div>
         </div>
         <div class="projects-footer__contacts">
@@ -598,31 +632,31 @@
     <h2 class="about__title">гарантируем 100% качество наших работ</h2>
     <p class="about__descr">Кратко о наших преимуществах. Если у вас возникли вопросы — свяжитесь с нами!</p>
     <div class="about__grid about-grid">
-      <div class="about-grid__item" style='background-image: url("../img/grid-item-1.png");'>
+      <div class="about-grid__item" style='background-image: url("./img/grid-item-1.png");'>
         <h4 class="about-grid__title">Без предоплаты</h4>
         <p class="about-grid__descr">Цена фиксирована. Аванс после доставки материала, остаток – после сдачи;</p>
       </div>
-      <div class="about-grid__item" style='background-image: url("../img/grid-item-2.png");'>
+      <div class="about-grid__item" style='background-image: url("./img/grid-item-2.png");'>
         <h4 class="about-grid__title">Опыт работы</h4>
         <p class="about-grid__descr">Опыт каждого из наших мастеров — от 7 лет. Раз в год переобучаемся;</p>
       </div>
       <div class="about-grid__item about-grid__item--empty"></div>
-      <div class="about-grid__item" style='background-image: url("../img/grid-item-3.png");'>
+      <div class="about-grid__item" style='background-image: url("./img/grid-item-3.png");'>
         <h4 class="about-grid__title">Материалы</h4>
         <p class="about-grid__descr">Настоящая вологодская хвойная древесина. Даем гарантию — 5 лет;</p>
       </div>
-      <div class="about-grid__item" style='background-image: url("../img/grid-item-4.png");'>
+      <div class="about-grid__item" style='background-image: url("./img/grid-item-4.png");'>
         <h4 class="about-grid__title">Строим в срок</h4>
         <p class="about-grid__descr">В договоре фиксируем сроки сдачи объекта и соблюдаем их;</p>
       </div>
-      <div class="about-grid__item" style='background-image: url("../img/grid-item-5.png");'>
+      <div class="about-grid__item" style='background-image: url("./img/grid-item-5.png");'>
         <h4 class="about-grid__title">300+ проектов</h4>
         <p class="about-grid__descr">Реализовали по всей России. Нас выбрали более 100 семей из 23 городов;</p>
       </div>
       </div>
       <div class="about__about-projects">
-        <a class="about__link yellow-btn">
-          <img src="../img/finger.png" alt="finger icon">
+        <a href="/catalog.html" class="about__link yellow-btn">
+          <img src="./img/finger.png" alt="finger icon">
           <span>выбрать для себя проект</span>
         </a>
         <span class="about-projects">Свыше 200 проектов на любой вкус</span>
@@ -641,19 +675,19 @@
           <span>Выберите удобный способ связи:</span>
           <ul class="callback-form-social-list__list">
             <li class="callback-form-social-list__item">
-              <img class="callback-form-social-list__img" src="../img/excursion-whats.png" alt="WhatsApp icon">
+              <img class="callback-form-social-list__img" src="./img/excursion-whats.png" alt="WhatsApp icon">
               <a href="#" class="callback-form-social-list__link">WhatsApp</a>
             </li>
             <li class="callback-form-social-list__item">
-              <img class="callback-form-social-list__img" src="../img/excursion-viber.png" alt="">
+              <img class="callback-form-social-list__img" src="./img/excursion-viber.png" alt="">
               <a href="#" class="callback-form-social-list__link">Viber</a>
             </li>
             <li class="callback-form-social-list__item">
-              <img class="callback-form-social-list__img" src="../img/excursion-telegram.png" alt="">
+              <img class="callback-form-social-list__img" src="./img/excursion-telegram.png" alt="">
               <a href="#" class="callback-form-social-list__link">Telegram</a>
             </li>
             <li class="callback-form-social-list__item">
-              <img class="callback-form-social-list__img" src="../img/excursion-call.png" alt="">
+              <img class="callback-form-social-list__img" src="./img/excursion-call.png" alt="">
               <a href="#" class="callback-form-social-list__link">Звонок</a>
             </li>
           </ul>
@@ -665,7 +699,7 @@
         <span class="callback-form__label">Введите номер телефона:</span>
         <input class="callback-form__phone phone-input" inputmode="tel" type="tel" name="tel" placeholder="Номер телефона">
         <button class="btn-reset yellow-btn callback-form__btn" type="submit">
-          <img src="../img/finger.png" alt="finger icon">
+          <img src="./img/finger.png" alt="finger icon">
           <span>записаться</span>
         </button>
         <label for="agree" class="callback-form__agree custom-checkbox-agree">
@@ -709,7 +743,7 @@
         <p class="stages-item__descr">На данном этапе происходит оплата 70% стоимости объекта;</p>
       </li>
       <li class="work-schema__feedback-link">
-        <a class="blue-btn" href="#">перезвоните мне</a>
+        <a class="blue-btn open-callback-modal">перезвоните мне</a>
       </li>
       <li class="work-schema__stages-item stages-item stages-item--left stages-item--step-4">
         <div class="stages-item__top">
@@ -837,9 +871,9 @@
     </div>
     <div class="portfolio__map">
       <div class="portfolio__map__location map-location">
-        <img src="../img/marker.png" alt="Map marker">
+        <img src="./img/marker.png" alt="Map marker">
         <div class="map-location__content">
-          <img src="../img/location-img.jpg" alt="project img" class="map-location__img">
+          <img src="./img/location-img.jpg" alt="project img" class="map-location__img">
           <div class="map-location__text">
             <ul class="map-location__project-props">
               <li class="map-location__project-prop"><span>113 м²</span></li>
@@ -847,7 +881,7 @@
             </ul>
             <h4 class="map-location__title">Каркасный дом, проект «ДК-012»</h4>
             <p class="map-location__descr">Новгородская область, д. Неронов Бор</p>
-            <a href="#" class="map-location__link blue-btn">подробнее</a>
+            <a href="/project.html" class="map-location__link blue-btn">подробнее</a>
           </div>
         </div>
       </div>
@@ -857,16 +891,18 @@
         <div class="swiper-slide">
           <ul class="portfolio-slider__list">
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -874,16 +910,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -891,16 +929,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -908,16 +948,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -925,16 +967,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -942,122 +986,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+12</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="swiper-slide">
-          <ul class="portfolio-slider__list">
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+12</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+10</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+15</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+10</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+15</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -1069,16 +1009,18 @@
         <div class="swiper-slide">
           <ul class="portfolio-slider__list">
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -1086,16 +1028,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -1103,16 +1047,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -1120,16 +1066,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -1137,16 +1085,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -1154,122 +1104,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+12</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="swiper-slide">
-          <ul class="portfolio-slider__list">
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+12</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+10</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+15</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+10</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
-                  <a href="#">+15</a>
-                </li>
-              </ul>
-            </li>
-            <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
-              <ul class="portfolio-slider__preview-list">
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
-                </li>
-                <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -1281,16 +1127,18 @@
         <div class="swiper-slide">
           <ul class="portfolio-slider__list">
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -1298,16 +1146,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -1315,16 +1165,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -1332,16 +1184,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-2.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+10</a>
@@ -1349,16 +1203,18 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-3.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+15</a>
@@ -1366,16 +1222,254 @@
               </ul>
             </li>
             <li class="portfolio-slider__item">
-              <img class="portfolio-slider__img" src="../img/port-item-bg-1.png" alt="house image">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
               <ul class="portfolio-slider__preview-list">
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-1.jpg" alt="preview image">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-2.jpg" alt="preview image">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item">
-                  <img src="../img/port-prev-3.jpg" alt="preview image">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+12</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="portfolio-slider__list">
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+12</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+10</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+15</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+10</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+15</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+12</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="portfolio-slider__list">
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+12</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+10</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+15</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-2.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+10</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-3.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
+                  <a href="#">+15</a>
+                </li>
+              </ul>
+            </li>
+            <li class="portfolio-slider__item">
+              <a href="/project.html">
+                <img class="portfolio-slider__img" src="./img/port-item-bg-1.png" alt="house image">
+              </a>
+              <ul class="portfolio-slider__preview-list">
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-1.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-2.jpg" alt="preview image">
+                </li>
+                <li class="portfolio-slider__preview-item">
+                  <img src="./img/port-prev-3.jpg" alt="preview image">
                 </li>
                 <li class="portfolio-slider__preview-item portfolio-slider__preview-item--link">
                   <a href="#">+12</a>
@@ -1390,19 +1484,19 @@
     <div class="portfolio__statistic statistic">
       <ul class="statistic__list">
         <li class="statistic__item statistic__item--count">
-          <img class="statistic__img" src="../img/proj-count.png" alt="Количество проектов">
+          <img class="statistic__img" src="./img/proj-count.png" alt="Количество проектов">
           <p class="statistic__descr">домов и бань построено нами за все время</p>
-          <a class="statistic__link blue-btn">Посмотреть</a>
+          <a href="/catalog.html" class="statistic__link blue-btn">Посмотреть</a>
         </li>
         <li class="statistic__item statistic__item--count">
-          <img class="statistic__img" src="../img/family-count.png" alt="Количество проектов">
+          <img class="statistic__img" src="./img/family-count.png" alt="Количество проектов">
           <p class="statistic__descr">семей уже радуются жизни в новых домах</p>
-          <a class="statistic__link blue-btn">читать отзывы</a>
+          <a href="#review" class="statistic__link blue-btn">читать отзывы</a>
         </li>
         <li class="statistic__item statistic__item--count">
-          <img class="statistic__img" src="../img/clients-count.png" alt="Количество проектов">
+          <img class="statistic__img" src="./img/clients-count.png" alt="Количество проектов">
           <p class="statistic__descr">делаем счастливыми людей с 2010 года</p>
-          <a class="statistic__link blue-btn">немного о нас</a>
+          <a href="#about" class="statistic__link blue-btn">немного о нас</a>
         </li>
       </ul>
     </div>
@@ -1411,6 +1505,7 @@
 
          <section class="reviews">
   <div class="container reviews__container">
+    <a name="review" class="visually-hiden"></a>
     <h2 class="reviews__title">в 99,9% случаев клиенты довольны нашей работой</h2>
     <p class="reviews__descr">Только реальные клиенты. Никаких «покупных» отзывов. Учитываем все замечания и стараемся быть лучше</p>
     <div class="reviews__slider-container">
@@ -1419,24 +1514,24 @@
           <div class="swiper-slide">
             <div class="review-card">
               <div class="review-card__gallery">
-                <img src="../img/review-img.jpg" alt="review image" class="review-card__image">
+                <img src="./img/review-img.jpg" alt="review image" class="review-card__image">
                 <div class="review-card__preview-slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-1.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-1.jpg" alt="preview image">
                         <span>Крыльцо</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-2.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-2.jpg" alt="preview image">
                         <span>Первый этаж</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-3.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-3.jpg" alt="preview image">
                         <span>Мансарда</span>
                       </div>
                     </div>
@@ -1455,7 +1550,7 @@
               </div>
               <div class="review-card__content">
                 <div class="review-card__user-info user-info">
-                  <img class="user-info__avatar" src="../img/user-icon.png" alt="User avatar">
+                  <img class="user-info__avatar" src="./img/user-icon.png" alt="User avatar">
                   <div class="user-info__content">
                     <span class="user-info__name">Андрей Блинов</span>
                     <span class="user-info__review-date">Август 17, 2020 · </span>
@@ -1483,24 +1578,24 @@
           <div class="swiper-slide">
             <div class="review-card">
               <div class="review-card__gallery">
-                <img src="../img/review-img.jpg" alt="review image" class="review-card__image">
+                <img src="./img/review-img.jpg" alt="review image" class="review-card__image">
                 <div class="review-card__preview-slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-1.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-1.jpg" alt="preview image">
                         <span>Крыльцо</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-2.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-2.jpg" alt="preview image">
                         <span>Первый этаж</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-3.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-3.jpg" alt="preview image">
                         <span>Мансарда</span>
                       </div>
                     </div>
@@ -1519,7 +1614,7 @@
               </div>
               <div class="review-card__content">
                 <div class="review-card__user-info user-info">
-                  <img class="user-info__avatar" src="../img/user-icon.png" alt="User avatar">
+                  <img class="user-info__avatar" src="./img/user-icon.png" alt="User avatar">
                   <div class="user-info__content">
                     <span class="user-info__name">Андрей Блинов</span>
                     <span class="user-info__review-date">Август 17, 2020 · </span>
@@ -1547,24 +1642,24 @@
           <div class="swiper-slide">
             <div class="review-card">
               <div class="review-card__gallery">
-                <img src="../img/review-img.jpg" alt="review image" class="review-card__image">
+                <img src="./img/review-img.jpg" alt="review image" class="review-card__image">
                 <div class="review-card__preview-slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-1.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-1.jpg" alt="preview image">
                         <span>Крыльцо</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-2.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-2.jpg" alt="preview image">
                         <span>Первый этаж</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-3.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-3.jpg" alt="preview image">
                         <span>Мансарда</span>
                       </div>
                     </div>
@@ -1583,7 +1678,7 @@
               </div>
               <div class="review-card__content">
                 <div class="review-card__user-info user-info">
-                  <img class="user-info__avatar" src="../img/user-icon.png" alt="User avatar">
+                  <img class="user-info__avatar" src="./img/user-icon.png" alt="User avatar">
                   <div class="user-info__content">
                     <span class="user-info__name">Андрей Блинов</span>
                     <span class="user-info__review-date">Август 17, 2020 · </span>
@@ -1611,24 +1706,24 @@
           <div class="swiper-slide">
             <div class="review-card">
               <div class="review-card__gallery">
-                <img src="../img/review-img.jpg" alt="review image" class="review-card__image">
+                <img src="./img/review-img.jpg" alt="review image" class="review-card__image">
                 <div class="review-card__preview-slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-1.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-1.jpg" alt="preview image">
                         <span>Крыльцо</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-2.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-2.jpg" alt="preview image">
                         <span>Первый этаж</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-3.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-3.jpg" alt="preview image">
                         <span>Мансарда</span>
                       </div>
                     </div>
@@ -1647,7 +1742,7 @@
               </div>
               <div class="review-card__content">
                 <div class="review-card__user-info user-info">
-                  <img class="user-info__avatar" src="../img/user-icon.png" alt="User avatar">
+                  <img class="user-info__avatar" src="./img/user-icon.png" alt="User avatar">
                   <div class="user-info__content">
                     <span class="user-info__name">Андрей Блинов</span>
                     <span class="user-info__review-date">Август 17, 2020 · </span>
@@ -1675,24 +1770,24 @@
           <div class="swiper-slide">
             <div class="review-card">
               <div class="review-card__gallery">
-                <img src="../img/review-img.jpg" alt="review image" class="review-card__image">
+                <img src="./img/review-img.jpg" alt="review image" class="review-card__image">
                 <div class="review-card__preview-slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-1.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-1.jpg" alt="preview image">
                         <span>Крыльцо</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-2.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-2.jpg" alt="preview image">
                         <span>Первый этаж</span>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="review-card__preview-slider__slide">
-                        <img src="../img/preview-slider-img-3.jpg" alt="preview image">
+                        <img src="./img/preview-slider-img-3.jpg" alt="preview image">
                         <span>Мансарда</span>
                       </div>
                     </div>
@@ -1711,7 +1806,7 @@
               </div>
               <div class="review-card__content">
                 <div class="review-card__user-info user-info">
-                  <img class="user-info__avatar" src="../img/user-icon.png" alt="User avatar">
+                  <img class="user-info__avatar" src="./img/user-icon.png" alt="User avatar">
                   <div class="user-info__content">
                     <span class="user-info__name">Андрей Блинов</span>
                     <span class="user-info__review-date">Август 17, 2020 · </span>
@@ -1737,7 +1832,6 @@
             </div>
           </div>
         </div>
-        <div class="reviews__slider-pag"></div>
       </div>
       <button class="btn-reset reviews__slider__prev-btn">
         <svg>
@@ -1766,37 +1860,49 @@
     <p class="callback__descr">
       Наш менеджер с радостью ответит на них и поможет подобрать вам проект
     </p>
-    <img src="../img/Ruble.png" alt="ruble icon">
+    <img src="./img/Ruble.png" alt="ruble icon">
     <p class="callback__proposal">Получите бесплатные подарки при заказе своего дома</p>
-    <a href="#" class="blue-btn callback__details-link">подробнее</a>
+    <a class="blue-btn callback__details-link open-callback-modal">подробнее</a>
     <div class="callback__form">
       <h4 class="callback__form__title">мы перезвоним вам в течение 30 минут</h4>
       <p class="callback__form__descr">В рабочие часы, с 9:00 — 18:00</p>
-      <div class="callback__form__social">
-        <ul class="callback-form-social-list__list">
-          <li class="callback-form-social-list__item callback-form-social-list__item--whats">
-            <img class="callback-form-social-list__img" src="../img/whatsapp-ios.png" alt="WhatsApp icon">
-            <a href="#" class="callback-form-social-list__link">WhatsApp</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--viber">
-            <img class="callback-form-social-list__img" src="../img/viber-ios.png" alt="Viber icon">
-            <a href="#" class="callback-form-social-list__link">Viber</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--telega">
-            <img class="callback-form-social-list__img" src="../img/telega-ios.png" alt="Telegram icon">
-            <a href="#" class="callback-form-social-list__link">Telegram</a>
-          </li>
-          <li class="callback-form-social-list__item callback-form-social-list__item--call">
-            <img class="callback-form-social-list__img" src="../img/call-ios.png" alt="Call icon">
-            <a href="#" class="callback-form-social-list__link">Звонок</a>
-          </li>
-        </ul>
-      </div>
       <form class="callback-form">
+        <div class="callback__form__social">
+          <ul class="callback-form-social-list__list">
+            <li class="callback-form-social-list__item callback-form-social-list__item--whats">
+              <label for="WhatsApp">
+                <input type="checkbox" name="WhatsApp" id="WhatsApp" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="./img/whatsapp-ios.png" alt="WhatsApp icon">
+                <a class="callback-form-social-list__link">WhatsApp</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--viber">
+              <label for="Viber">
+                <input type="checkbox" name="Viber" id="Viber" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="./img/viber-ios.png" alt="Viber icon">
+                <a class="callback-form-social-list__link">Viber</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--telega">
+              <label for="Telegram">
+                <input type="checkbox" name="Telegram" id="Telegram" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="./img/telega-ios.png" alt="Telegram icon">
+                <a class="callback-form-social-list__link">Telegram</a>
+              </label>
+            </li>
+            <li class="callback-form-social-list__item callback-form-social-list__item--call">
+              <label for="Call">
+                <input type="checkbox" name="Call" id="Call" class="visually-hidden">
+                <img class="callback-form-social-list__img" src="./img/call-ios.png" alt="Call icon">
+                <a class="callback-form-social-list__link">Звонок</a>
+              </label>
+            </li>
+          </ul>
+        </div>
         <span class="callback-form__label">Введите номер телефона:</span>
         <input class="callback-form__phone phone-input" inputmode="tel" type="tel" name="tel" placeholder="Номер телефона">
         <button class="btn-reset yellow-btn callback-form__btn" type="submit">
-          <img src="../img/finger.png" alt="finger icon">
+          <img src="./img/finger.png" alt="finger icon">
           <span>записаться</span>
         </button>
         <label for="agree2" class="callback-form__agree custom-checkbox-agree">
@@ -1806,6 +1912,7 @@
           </span>
         </label>
       </form>
+      <img src="./img/manager.png" class="callback__manager" alt="Dimitriy">
     </div>
 </section>
 
@@ -1813,6 +1920,14 @@
        </main>
        <footer class="footer">
   <div class="container footer__container">
+    <button class="btn-reset footer__burger-btn">
+      <div class="burger-btn_container">
+        <div class="burger-btn_wrapper">
+          <div class="burger-btn"><span></span></div>
+        </div>
+      </div>
+      <span class="burger-text">открыть меню</span>
+    </button>
     <div class="footer__left">
       <div class="footer__links">
         <nav class="footer__column">
@@ -1875,9 +1990,13 @@
         </div>
       </div>
       <div class="footer-contacts__callback-link">
-        <a href="#" class="yellow-btn">Перезвоните мне</a>
+        <a class="yellow-btn open-callback-modal">Перезвоните мне</a>
         <br><br><br><br>
         <span class="about-projects">Это — бесплатно. Перезвоним за 30 минут в рабочие часы</span>
+      </div>
+      <div class="footer__mobile-address">
+        <p class="footer__mobile-address__descr">174510, Новгородская область, г. Пестово, ул. Луговая, 10</p>
+        <a href="#" class="footer__mobile-address__link">work@53-doma.ru</a>
       </div>
     </div>
   </div>

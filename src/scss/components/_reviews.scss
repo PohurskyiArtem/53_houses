@@ -16,6 +16,10 @@
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
+
+    @include xs {
+      font-size: 34px;
+    }
   }
 
   &__descr {
@@ -29,11 +33,21 @@
     @include mobile {
       margin-bottom: 100px;
     }
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &__slider-container {
     position: relative;
     min-width: 1170px;
+
+    @include mobile {
+      margin: auto;
+      width: 95%;
+      min-width: auto;
+    }
   }
 
   &__slider {
@@ -50,27 +64,47 @@
       width: 100%;
     }
 
+    @include sm {
+      height: auto;
+    }
+
     &__prev-btn {
-      left: 20px;
+      left: 70px;
       transform: rotate(-180deg);
 
       @include mobile {
+        left: 40%;
+      }
+
+      @include sm {
         left: 35%;
+      }
+
+      @include xs {
+        left: 20%;
       }
     }
 
     &__next-btn {
-      right: 20px;
+      right: 70px;
 
       @include mobile {
-        right: 50%;
+        right: 40%;
+      }
+
+      @include sm {
+        right: 35%;
+      }
+
+      @include xs {
+        right: 20%;
       }
     }
 
     &__prev-btn,
     &__next-btn {
       position: absolute;
-      bottom: 50%;
+      bottom: 250px;
       z-index: 40;
       border: 10px solid #f7f9fa;
       border-radius: 100%;
@@ -104,6 +138,7 @@
     &__link {
       margin-bottom: 22px;
       padding: 29px 55px;
+      cursor: pointer;
     }
   }
 
@@ -114,12 +149,17 @@
 }
 
 .reviews__slider-pag {
-  margin-top: 57px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .reviews__slider.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction {
   display: flex;
   justify-content: center;
+}
+
+.reviews__slider.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 30px;
 }
 
 .review-card {
@@ -130,6 +170,10 @@
   max-width: 100%;
   background-color: var(--color-white);
 
+  @include sm {
+    flex-direction: column;
+  }
+
   &__gallery {
     position: relative;
     margin-right: 5.5%;
@@ -139,11 +183,32 @@
     @include mobile {
       width: 40%;
     }
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   &__image {
+    border-radius: 15px;
     width: 100%;
-    max-height: 310px;
+    min-height: 310px;
+    cursor: zoom-in;
+
+    @include mobile {
+      min-height: 253px;
+    }
+
+    @include sm {
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    @include xs {
+      margin-left: 0;
+      width: 100%;
+      min-height: 180px;
+    }
   }
 
   &__preview-slider {
@@ -152,12 +217,37 @@
 
     &__slide {
       display: flex;
+      border-radius: 15px;
+      min-height: 130px;
       flex-direction: column;
       text-align: center;
       transition: opacity 0.3s;
 
+      img {
+        border-radius: 15px;
+        min-width: 100%;
+        min-height: 98px;
+
+        @include mobile {
+          min-height: 75px;
+        }
+
+        @include sm {
+          min-height: 140px;
+        }
+
+        @include xs {
+          height: 80px;
+          min-height: auto;
+        }
+      }
+
       &:not(:last-child) {
         margin-right: 5%;
+
+        @include sm {
+          margin-right: 0;
+        }
       }
 
       &:hover {
@@ -175,8 +265,8 @@
     }
 
     &__prev-btn {
-      left: -45px;
-      transform: rotate(-180deg);
+      left: -35px;
+      transform: scale(-1, 1);
     }
 
     &__next-btn {
@@ -190,8 +280,7 @@
       z-index: 20;
       border: 10px solid var(--color-white);
       border-radius: 100%;
-      padding: 10px 12px;
-      padding-top: 12px;
+      padding: 12px 12px 10px;
       width: 20px;
       height: 20px;
       color: var(--color-white);
@@ -206,6 +295,25 @@
       &:hover {
         background-color: var(--color-cerulean);
       }
+
+      @include mobile {
+        bottom: 215px;
+      }
+
+      @include sm {
+        bottom: 60px;
+        padding: 12px 12px 10px;
+        width: 40px;
+        height: 40px;
+      }
+
+      @include xs {
+        bottom: 65px;
+        border: 7px solid var(--color-white);
+        padding: 12px 12px 10px;
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 
@@ -216,6 +324,11 @@
     @include mobile {
       padding-right: 20px;
       width: 54.5%;
+    }
+
+    @include sm {
+      margin-top: 25px;
+      width: 100%;
     }
   }
 
@@ -232,6 +345,15 @@
 
     @include mobile {
       max-width: 85%;
+    }
+
+    @include sm {
+      width: 100%;
+      max-width: none;
+    }
+
+    @include xs {
+      flex-direction: column;
     }
   }
 
@@ -258,6 +380,16 @@
       font-size: 18px;
       line-height: 160%;
     }
+
+    @include xs {
+      margin-right: auto;
+      margin-bottom: 50px;
+      margin-left: 0;
+
+      &__descr {
+        max-height: 40px;
+      }
+    }
   }
 
   &__text-review {
@@ -266,6 +398,10 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
+
+    @include sm {
+      max-width: none;
+    }
   }
 
   &__source-link {
@@ -290,6 +426,11 @@
       border-color: transparent;
       background-color: #fff180;
     }
+
+    @include sm {
+      margin: auto;
+      margin-bottom: 25px;
+    }
   }
 
   &__source-link-descr {
@@ -301,6 +442,13 @@
     text-align: center;
     color: #a3b1b7;
     opacity: 0.85;
+
+    @include sm {
+      display: block;
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 

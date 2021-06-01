@@ -6,6 +6,11 @@
     font-size: 72px;
     line-height: 100%;
     text-transform: uppercase;
+
+    @include xs {
+      max-width: 70%;
+      font-size: 34px;
+    }
   }
 
   .work-schema {
@@ -20,12 +25,25 @@
   &__container {
     display: flex;
     min-width: 1170px;
+
+    @include md {
+      min-width: auto;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
   }
 
   &__left {
     margin-right: 2.5%;
     width: 66%;
     height: 100%;
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 25px;
+    }
   }
 
   &__gallery {
@@ -36,6 +54,10 @@
     img {
       width: 100%;
       height: 540px;
+
+      @include xs {
+        max-height: 300px;
+      }
     }
   }
 
@@ -49,6 +71,10 @@
     height: 140px;
     background-image: url("../../img/guarantee.png");
     background-position: center 20%;
+
+    @include xs {
+      display: none;
+    }
   }
 
   &__btn-container {
@@ -70,6 +96,10 @@
         transform: rotate(-180deg);
       }
     }
+
+    @include mobile {
+      top: 13%;
+    }
   }
 
   &__paginaton {
@@ -79,6 +109,10 @@
     z-index: 100;
     display: flex;
     justify-content: flex-start;
+
+    @include xs {
+      left: 2%;
+    }
   }
 
   &__prev-image {
@@ -86,6 +120,17 @@
     border-radius: 100%;
     width: 70px;
     height: 70px;
+
+    @include xs {
+      border: 3px solid var(--color-white);
+      width: 50px;
+      height: 50px;
+    }
+
+    @include xxs {
+      width: 40px;
+      height: 40px;
+    }
 
     img {
       position: relative;
@@ -97,6 +142,10 @@
 
     &:not(:last-child) {
       margin-right: 9px;
+
+      @include xxs {
+        margin-right: 3px;
+      }
     }
 
     &:hover {
@@ -115,6 +164,18 @@
     &__text {
       font-size: 16px;
     }
+
+    @include xs {
+      padding: 200px 30px 30px;
+      text-align: center;
+      background-position: top center;
+
+      &__text {
+        display: block;
+        margin: auto;
+        max-width: 300px;
+      }
+    }
   }
 
   &__promotion {
@@ -131,6 +192,11 @@
 
     &__text {
       font-size: 20px;
+
+      @include xs {
+        max-width: 270px;
+        text-align: center;
+      }
     }
 
     &__link {
@@ -138,6 +204,17 @@
       padding: 20px 40px;
       width: 175px;
       height: 60px;
+
+      @include xs {
+        margin: auto;
+      }
+    }
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+      padding: 110px 0 45px;
+      background-position: center 20%;
     }
   }
 
@@ -150,6 +227,10 @@
 
     .statistic__item {
       width: 50%;
+
+      @include sm {
+        width: 100%;
+      }
     }
   }
 
@@ -161,6 +242,11 @@
       &:not(:last-child) {
         border-bottom: 1px solid var(--color-mystic);
       }
+    }
+
+    @include mobile {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -249,6 +335,10 @@
       width: 100%;
       font-weight: 700;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       &:not(:last-child) {
         border-bottom: 1px solid var(--color-mystic);
       }
@@ -304,6 +394,12 @@
       background-image: url("../../img/finger-white.png");
       background-position: 15% center;
       background-repeat: no-repeat;
+
+      @include mobile {
+        padding: 25px 45px;
+        background-image: none;
+        text-align: center;
+      }
     }
 
     .about-projects {
@@ -347,6 +443,19 @@
       span {
         font-weight: 800;
       }
+    }
+  }
+}
+
+.open-plan {
+  cursor: pointer;
+}
+
+.more-projects {
+  .projects-slider-nav {
+    @include sm {
+      right: 30px;
+      top: 15px;
     }
   }
 }

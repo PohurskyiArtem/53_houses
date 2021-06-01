@@ -9,17 +9,30 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include sm {
+    padding-bottom: 50px;
+  }
+
+  @include xs {
+    top: -228px;
+  }
+
   &::after {
     content: "";
     position: absolute;
-    left: 45%;
-    bottom: 76px;
+    left: 50%;
+    bottom: 50px;
     width: 215px;
     height: 65px;
     background-image: url("../../img/promt-schema.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transform: translateX(-50%);
+
+    @include sm {
+      bottom: 345px;
+    }
   }
 
   &__title {
@@ -27,6 +40,14 @@
     margin-bottom: 60px;
     font-size: 72px;
     text-transform: uppercase;
+
+    @include sm {
+      text-align: center;
+    }
+
+    @include xs {
+      font-size: 34px;
+    }
   }
 
   .work-shema__stages-list {
@@ -36,6 +57,11 @@
 
     @include mobile {
       min-width: auto;
+    }
+
+    @include sm {
+      position: relative;
+      flex-direction: column;
     }
   }
 
@@ -59,6 +85,11 @@
         margin: auto;
       }
     }
+
+    @include sm {
+      position: absolute;
+      top: 275px;
+    }
   }
 }
 
@@ -72,6 +103,24 @@
   @include mobile {
     padding: 40px 25px 40px 25px;
     width: 290px;
+  }
+
+  @include sm {
+    margin: auto;
+    width: 80%;
+    clip-path: polygon(0% 0%, 96% 0, 100% 50%, 96% 100%, 0% 100%) !important;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:first-child, {
+      margin-bottom: 85px;
+    }
+
+    &:nth-child(6n) {
+      margin-bottom: 105px;
+    }
   }
 
   &__top {
@@ -91,12 +140,20 @@
     max-width: 130px;
     font-size: 20px;
     line-height: 130%;
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &__descr {
     @include mont;
     font-size: 18px;
     line-height: 160%;
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &--step-1 {
@@ -123,6 +180,10 @@
       background-position: 0 0;
       background-repeat: no-repeat;
     }
+
+    @include sm {
+      margin-right: auto;
+    }
   }
 
   &--step-4 {
@@ -148,6 +209,10 @@
       background-image: url("../../img/step6.png");
       background-position: 0 0;
       background-repeat: no-repeat;
+    }
+
+    @include sm {
+      margin-right: auto;
     }
   }
 

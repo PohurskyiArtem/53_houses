@@ -9,6 +9,10 @@
   &__list {
     display: flex;
     width: 100%;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -27,13 +31,22 @@
     &--gift {
       background-image: url("../../img/promotion1-bg.jpg");
 
+      .promotions__link {
+        color: #42a632;
+      }
+
       @include mobile {
         background-position: 100%;
         background-size: cover;
       }
 
-      .promotions__link {
-        color: #42a632;
+      @include sm {
+        padding-left: 30px;
+      }
+
+      @include xs {
+        padding-right: 20px;
+        text-align: right;
       }
     }
 
@@ -59,6 +72,14 @@
         color: #6532a6;
       }
     }
+
+    @include sm {
+      width: 100%;
+    }
+
+    @include xs {
+      height: 355px;
+    }
   }
 
   &__content {
@@ -70,6 +91,15 @@
     @include mobile {
       width: 65%;
     }
+
+    @include sm {
+      width: 50%;
+    }
+
+    @include xs {
+      padding: 40px 0;
+      width: 70%;
+    }
   }
 
   &__title {
@@ -77,6 +107,11 @@
     font-size: 34px;
     line-height: 110%;
     color: var(--color-white);
+
+    @include xs {
+      margin-top: 0;
+      font-size: 28px;
+    }
   }
 
   &__descr {
@@ -86,6 +121,10 @@
     line-height: 160%;
     color: var(--color-white);
     opacity: 0.9;
+
+    @include xs {
+      font-size: 16px;
+    }
   }
 
   &__link {

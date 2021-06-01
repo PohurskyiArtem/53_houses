@@ -63,10 +63,19 @@ ul {
   @include md-extended {
     width: auto;
     max-width: 1250px;
+    padding: 0 10px;
+  }
+
+  @include mobile {
+    padding: 0 40px;
   }
 
   @include xs {
     padding: 0 15px;
+  }
+
+  @include xxs {
+    padding: 0;
   }
 }
 
@@ -112,4 +121,97 @@ ul {
 
 .breadcrumbs {
   @include breadcrumbs;
+}
+
+.burger-btn_container {
+  position: absolute;
+  right: 5px;
+  display: none;
+  width: 40px;
+  height: 40px;
+
+  @include sm {
+    display: block;
+  }
+
+  @include xs {
+    top: 18%;
+    right: 2%;
+  }
+}
+
+.burger-btn_wrapper {
+  position: relative;
+  top: 30%;
+  margin: auto;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin psevdo_burger {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+
+.burger-btn {
+  position: relative;
+  width: 30px;
+  height: 20px;
+
+  &::before {
+    @include psevdo_burger;
+    top: 2px;
+  }
+
+  &::after {
+    bottom: 0px;
+    @include psevdo_burger;
+    width: 50%;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 75%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+    cursor: pointer;
+  }
+
+  &.active {
+    &::before {
+      top: 9px;
+      width: 100%;
+      background-color: #ffe036;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 9px;
+      width: 100%;
+      background-color: #ffe036;
+      transform: rotate(-45deg);
+    }
+
+    span {
+      transform: scale(0);
+    }
+  }
+}
+
+.menu-open {
+  overflow: hidden;
 }

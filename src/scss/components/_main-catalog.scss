@@ -20,6 +20,15 @@
     padding-left: 25px;
     min-width: 1170px;
     background-color: var(--color-white);
+
+    @include md {
+      min-width: auto;
+    }
+
+    @include xs {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
 
   &__grid {
@@ -27,11 +36,27 @@
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 45px;
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    @include mobile {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include xs {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .catalog-filters {
   &__top {
+    position: relative;
     display: flex;
     border-bottom: 1px solid var(--color-mystic);
     padding: 35px 40px;
@@ -41,6 +66,50 @@
       margin-right: 40px;
       font-weight: 700;
       font-size: 34px;
+
+      @include xs {
+        font-size: 28px;
+      }
+    }
+
+    .hide-filters {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: none;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/triple-arrows.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+
+      &:hover {
+        animation: hide-filters-btn 0.8s ease-in-out infinite;
+      }
+
+      &--active {
+        transform: scale(1, -1);
+      }
+
+      @include sm {
+        display: block;
+      }
+    }
+
+    @keyframes hide-filters-btn {
+      0% {
+        top: 50%;
+      }
+
+      50% {
+        top: 60%;
+      }
+
+      100% {
+        top: 50%;
+      }
     }
   }
 
@@ -71,6 +140,19 @@
     display: flex;
     flex-direction: column;
     padding: 0 40px;
+
+    @include sm {
+      overflow: hidden;
+      height: 0;
+    }
+
+    @include xs {
+      padding: 0 5px;
+    }
+
+    &--active {
+      height: auto;
+    }
   }
 
   &__row {
@@ -82,6 +164,15 @@
       border-bottom: 1px solid var(--color-mystic);
       padding: 35px 0 45px;
     }
+
+    @include md {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -89,6 +180,11 @@
     flex-direction: column;
     align-items: space-between;
     justify-content: flex-start;
+
+    @include md {
+      width: 50%;
+      margin-bottom: 40px;
+    }
 
     &__title {
       margin-bottom: 25px;
@@ -104,6 +200,10 @@
 
     &:not(:first-child) {
       margin-left: 70px;
+
+      @include md {
+        margin-left: 0;
+      }
     }
   }
 
@@ -219,6 +319,15 @@
         margin-right: 10px;
       }
     }
+
+    @include xs {
+      font-size: 12px;
+
+      a,
+      button {
+        padding: 15px 25px;
+      }
+    }
   }
 
   &__reset-filters {
@@ -244,8 +353,13 @@
   text-transform: uppercase;
   color: #777d80;
 
+  @include xs {
+    display: none;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 10px;
