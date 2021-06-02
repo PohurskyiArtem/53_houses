@@ -89,10 +89,6 @@
     width: 100%;
     background-color: var(--color-white);
 
-    @include xs {
-      left: 0;
-    }
-
     &::before {
       content: "";
       position: absolute;
@@ -112,6 +108,10 @@
       top: 57px;
       width: 45px;
       height: 60px;
+    }
+
+    @include xs {
+      left: 0;
     }
   }
 

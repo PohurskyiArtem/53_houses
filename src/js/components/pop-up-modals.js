@@ -54,8 +54,8 @@ const callbackForm = () => {
               <img src="../img/finger.png" alt="finger icon">
               <span>записаться</span>
             </button>
-            <label for="agree-cb" class="callback-form__agree custom-checkbox-agree">
-              <input type="checkbox" name="agree-cb" id="agree-cb" class="visually-hidden custom-checkbox-agree__input" required>
+            <label for="agree-cb" class="callback-form__agree custom-checkbox-agree custom-checkbox-agree--active">
+              <input type="checkbox" name="agree-cb" id="agree-cb" class="visually-hidden custom-checkbox-agree__input" required checked>
               <span class="custom-checkbox-agree__text">
                 Нажимая на кнопку «Отправить заявку», я даю свое согласие на обработку персональных данных в соответствии с политикой конфиденциальности
               </span>
@@ -173,8 +173,8 @@ const calculateModal = () => {
               <img src="../img/finger.png" alt="finger icon">
               <span>отправить заявку</span>
             </button>
-            <label for="agree-cb" class="callback-form__agree custom-checkbox-agree">
-              <input type="checkbox" name="agree-cb" id="agree-cb" class="visually-hidden custom-checkbox-agree__input" required>
+            <label for="agree-cb" class="callback-form__agree custom-checkbox-agree custom-checkbox-agree--active">
+              <input type="checkbox" name="agree-cb" id="agree-cb" class="visually-hidden custom-checkbox-agree__input" required checked>
               <span class="custom-checkbox-agree__text">
                 Нажимая на кнопку «Отправить заявку», я даю свое согласие на обработку персональных данных в соответствии с политикой конфиденциальности
               </span>

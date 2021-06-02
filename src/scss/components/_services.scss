@@ -56,7 +56,7 @@
 
     @include xs {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       padding: 70px 0;
     }
   }
@@ -68,11 +68,6 @@
     width: 70px;
     height: 70px;
     background-color: var(--color-cerulean);
-
-    @include xs {
-      width: 35px;
-      height: 35px;
-    }
 
     svg {
       position: absolute;
@@ -115,6 +110,53 @@
         }
       }
     }
+
+    @include xs {
+      width: 35px;
+      height: 35px;
+
+      &:nth-child(1n) {
+        .services-content {
+          left: -5px;
+          top: 50px;
+        }
+      }
+
+      &:nth-child(2n) {
+        .services-content {
+          left: -40px;
+          top: 50px;
+        }
+      }
+
+      &:nth-child(3n) {
+        .services-content {
+          left: -75px;
+          top: 50px;
+        }
+      }
+
+      &:nth-child(4n) {
+        .services-content {
+          left: -110px;
+          top: 50px;
+        }
+      }
+
+      &:nth-child(5n) {
+        .services-content {
+          left: -145px;
+          top: 50px;
+        }
+      }
+
+      &:nth-child(6n) {
+        .services-content {
+          left: -180px;
+          top: 50px;
+        }
+      }
+    }
   }
 }
 
@@ -128,15 +170,6 @@
   width: 470px;
   height: 345px;
   background-color: var(--color-white);
-
-  @include xs {
-    padding: 40px 20px 43px 20px;
-    top: 50px;
-    left: -10px;
-    width: 220px;
-    height: auto;
-    text-align: center;
-  }
 
   &::before {
     content: "";
@@ -220,6 +253,31 @@
         border-color: transparent;
         background-color: #fff180;
       }
+    }
+  }
+
+  @include xs {
+    padding: 25px 20px 10px;
+    width: 220px;
+    height: auto;
+    text-align: center;
+
+    &::before {
+      left: 70px;
+      top: -10px;
+      transform: rotate(0deg);
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__descr {
+      margin-bottom: 5px;
+    }
+
+    &__link {
+      padding: 15px 30px;
     }
   }
 }

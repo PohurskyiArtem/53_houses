@@ -188,6 +188,7 @@
     &:hover {
       .callback-form-social-list__img {
         animation: ex-social-anim 0.4s ease-in-out;
+        cursor: pointer;
       }
     }
 
