@@ -114,6 +114,9 @@
     @include xs {
       width: 35px;
       height: 35px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
 
       &:nth-child(1n) {
         .services-content {
