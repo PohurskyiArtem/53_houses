@@ -240,6 +240,11 @@
           height: 80px;
           min-height: auto;
         }
+
+        @include xxs {
+          height: 50px;
+          min-height: auto;
+        }
       }
 
       &:not(:last-child) {
@@ -313,6 +318,14 @@
         padding: 12px 12px 10px;
         width: 15px;
         height: 15px;
+      }
+
+      @include xxs {
+        bottom: 85px;
+        border: 7px solid var(--color-white);
+        padding: 8px 8px 10px;
+        width: 10px;
+        height: 10px;
       }
     }
   }
@@ -463,6 +476,10 @@
     background-image: url("../../img/quote.png");
     background-position: right 0;
     background-repeat: no-repeat;
+
+    @include xs {
+      background-image: none;
+    }
   }
 
   &__name {

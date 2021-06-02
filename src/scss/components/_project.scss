@@ -112,6 +112,7 @@
 
     @include xs {
       left: 2%;
+      z-index: 120;
     }
   }
 
@@ -452,6 +453,18 @@
 }
 
 .more-projects {
+  .projects__header {
+    @include xs {
+      align-items: flex-start;
+      height: 110px;
+
+      .projects-slider-nav {
+        left: 10px;
+        top: 50px;
+      }
+    }
+  }
+
   .projects-slider-nav {
     @include sm {
       right: 30px;

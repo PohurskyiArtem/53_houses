@@ -312,6 +312,10 @@
 
   &__list {
     display: flex;
+
+    @include sm {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -335,6 +339,10 @@
     &:hover {
       opacity: 0.75;
       transition: opacity 0.3s;
+    }
+
+    @include sm {
+      margin-bottom: 5px;
     }
   }
 }
