@@ -19,28 +19,28 @@ const callbackForm = () => {
                 <li class="callback-form-social-list__item callback-form-social-list__item--whats">
                   <label for="WhatsApp">
                     <input type="checkbox" name="WhatsApp" id="WhatsApp" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/whatsapp-ios.png" alt="WhatsApp icon">
+                    <img class="callback-form-social-list__img" src="./img/whatsapp-ios.png" alt="WhatsApp icon">
                     <a class="callback-form-social-list__link">WhatsApp</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--viber">
                   <label for="Viber">
                     <input type="checkbox" name="Viber" id="Viber" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/viber-ios.png" alt="Viber icon">
+                    <img class="callback-form-social-list__img" src="./img/viber-ios.png" alt="Viber icon">
                     <a class="callback-form-social-list__link">Viber</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--telega">
                   <label for="Telegram">
                     <input type="checkbox" name="Telegram" id="Telegram" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/telega-ios.png" alt="Telegram icon">
+                    <img class="callback-form-social-list__img" src="./img/telega-ios.png" alt="Telegram icon">
                     <a class="callback-form-social-list__link">Telegram</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--call">
                   <label for="Call">
                     <input type="checkbox" name="Call" id="Call" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/call-ios.png" alt="Call icon">
+                    <img class="callback-form-social-list__img" src="./img/call-ios.png" alt="Call icon">
                     <a class="callback-form-social-list__link">Звонок</a>
                   </label>
                 </li>
@@ -51,7 +51,7 @@ const callbackForm = () => {
             <span class="callback-form__label">Введите номер телефона:</span>
             <input class="callback-form__phone phone-input" inputmode="tel" type="tel" name="tel" placeholder="Номер телефона" required>
             <button class="btn-reset yellow-btn callback-form__btn" type="submit">
-              <img src="../img/finger.png" alt="finger icon">
+              <img src="./img/finger.png" alt="finger icon">
               <span>записаться</span>
             </button>
             <label for="agree-cb" class="callback-form__agree custom-checkbox-agree custom-checkbox-agree--active">
@@ -140,28 +140,28 @@ const calculateModal = () => {
                 <li class="callback-form-social-list__item callback-form-social-list__item--whats">
                   <label for="WhatsApp">
                     <input type="checkbox" name="WhatsApp" id="WhatsApp" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/whatsapp-ios.png" alt="WhatsApp icon">
+                    <img class="callback-form-social-list__img" src="./img/whatsapp-ios.png" alt="WhatsApp icon">
                     <a class="callback-form-social-list__link">WhatsApp</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--viber">
                   <label for="Viber">
                     <input type="checkbox" name="Viber" id="Viber" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/viber-ios.png" alt="Viber icon">
+                    <img class="callback-form-social-list__img" src="./img/viber-ios.png" alt="Viber icon">
                     <a class="callback-form-social-list__link">Viber</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--telega">
                   <label for="Telegram">
                     <input type="checkbox" name="Telegram" id="Telegram" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/telega-ios.png" alt="Telegram icon">
+                    <img class="callback-form-social-list__img" src="./img/telega-ios.png" alt="Telegram icon">
                     <a class="callback-form-social-list__link">Telegram</a>
                   </label>
                 </li>
                 <li class="callback-form-social-list__item callback-form-social-list__item--call">
                   <label for="Call">
                     <input type="checkbox" name="Call" id="Call" class="visually-hidden">
-                    <img class="callback-form-social-list__img" src="../img/call-ios.png" alt="Call icon">
+                    <img class="callback-form-social-list__img" src="./img/call-ios.png" alt="Call icon">
                     <a class="callback-form-social-list__link">Звонок</a>
                   </label>
                 </li>
@@ -170,7 +170,7 @@ const calculateModal = () => {
             <span class="callback-form__label">Введите номер телефона:</span>
             <input class="callback-form__phone phone-input" inputmode="tel" type="tel" name="tel" placeholder="Номер телефона" required>
             <button class="btn-reset yellow-btn callback-form__btn" type="submit">
-              <img src="../img/finger.png" alt="finger icon">
+              <img src="./img/finger.png" alt="finger icon">
               <span>отправить заявку</span>
             </button>
             <label for="agree-cb" class="callback-form__agree custom-checkbox-agree custom-checkbox-agree--active">
@@ -189,9 +189,9 @@ const calculateModal = () => {
 
 const callbackPopUp = () => {
   document.body.insertAdjacentHTML('afterbegin', callbackForm());
-  let callback_input_phone = document.querySelector('.callback-form input[type=tel]');
-  let imf = new Inputmask('+8 (999) 999-99-99');
-  imf.mask(callback_input_phone);
+  // let callback_input_phone = document.querySelector('.callback-form input[type=tel]');
+  // let imf = new Inputmask('+8 (999) 999-99-99');
+  // imf.mask(callback_input_phone);
   document.querySelectorAll(".pop-up .callback-form-social-list__item").forEach(el => {
     el.querySelector("input").addEventListener('change', (e) => {
       let checked = el.querySelector('input').checked;
